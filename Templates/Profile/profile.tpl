@@ -27,10 +27,10 @@ include("menu.tpl"); ?>
 
     <table cellpadding="1" cellspacing="1" id="edit" ><thead>
     <tr>
-        <th colspan="3">Player <?php echo $session->username; ?> </th>
+        <th colspan="3">Joueur <?php echo $session->username; ?> </th>
     </tr>
     <tr>
-        <td colspan="2">Details</td>
+        <td colspan="2">Détails</td>
 
         <td>Description</td>
     </tr>
@@ -56,14 +56,14 @@ include("menu.tpl"); ?>
 	?>
     <td rowspan="<?php echo $rowspan; ?>" class="desc1"><textarea tabindex="7" name="be1"><?php echo $session->userinfo['desc2']; ?></textarea></td></tr>
 
-    <tr><th>Gender</th>
+    <tr><th>Genre</th>
     <td class="gend">
         <label><input class="radio" type="radio" name="mw" value="0" <?php if($session->userinfo['gender'] == 0) { echo "checked"; } ?> tabindex="4">n/a</label>
         <label><input class="radio" type="radio" name="mw" value="1" <?php if($session->userinfo['gender'] == 1) { echo "checked"; } ?> >m</label>
         <label><input class="radio" type="radio" name="mw" value="2" <?php if($session->userinfo['gender'] == 2) { echo "checked"; } ?> >f</label>
     </td></tr>
 
-    <tr><th>Location</th><td><input tabindex="5" type="text" name="ort" value="<?php echo $session->userinfo['location']; ?>" maxlength="30" class="text"></td></tr>
+    <tr><th>Lieu</th><td><input tabindex="5" type="text" name="ort" value="<?php echo $session->userinfo['location']; ?>" maxlength="30" class="text"></td></tr>
 
 
     <tr><td colspan="2" class="empty"></td></tr>
@@ -78,11 +78,11 @@ include("menu.tpl"); ?>
 
 	<p>
 		<table cellspacing="1" cellpadding="2" class="tbg">
-		<tr><td class="rbg" colspan="4">Medals</td></tr>
+		<tr><td class="rbg" colspan="4">Médailles</td></tr>
 		<tr>
-			<td>Category</td>
-			<td>Rank</td>
-			<td>Week</td>
+			<td>Catégorie</td>
+			<td>Rang</td>
+			<td>Semaine</td>
 			<td>BB-Code</td>
 		</tr>
 				<?php
@@ -175,7 +175,7 @@ MEDAL CATEGORY:
 						<td>[#g2300]</td>
 					 </tr>";
 				 }
-				 
+
 				 if(NEW_FUNCTIONS_MEDAL_5YEAR){
 					 echo "<tr>
 						<td>veteran_5a</td>
@@ -184,7 +184,7 @@ MEDAL CATEGORY:
 						<td>[#g2301]</td>
 					 </tr>";
 				 }
-				 
+
 				 if(NEW_FUNCTIONS_MEDAL_10YEAR){
 					 echo "<tr>
 						<td>veteran_10a</td>
@@ -193,7 +193,7 @@ MEDAL CATEGORY:
 						<td>[#g2302]</td>
 					 </tr>";
 				 }
-				 
+
 				// Added by Shadow - cata7007@gmail.com / Skype : cata7007
 				if(NEW_FUNCTIONS_TRIBE_IMAGES){
 					if($session->userinfo['tribe'] == 1){

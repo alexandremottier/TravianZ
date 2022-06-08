@@ -32,7 +32,7 @@ foreach($varray as $vil) {
     $totalpop += $vil['pop'];
 }
 ?>
-<h1>Player profile</h1>
+<h1>Profil du joueur</h1>
 
 <?php
 if($_GET['uid'] == $session->uid) {
@@ -46,16 +46,16 @@ include("menu2.tpl");
 <table id="profile" cellpadding="1" cellspacing="1" >
     <thead>
     <tr>
-        <th colspan="2">Player <?php echo $displayarray['username']; ?></th>
+        <th colspan="2">Joueur <?php echo $displayarray['username']; ?></th>
     </tr>
-<?php 
-if($displayarray['access'] == ADMIN) echo "<tr><th colspan='2'><font color='Red'><center><b>This player is Admin.</b></font></center></th></tr>";  
-if($displayarray['access'] == MULTIHUNTER) echo "<tr><th colspan='2'><font color='Blue'><center><b>This player is Multihunter.</b></font></center></th></tr>";
-if($displayarray['access'] == BANNED) echo "<tr><th colspan='2'><font color='Green'><center><b>This player is BANNED.</b></font></center></th></tr>";
-if($displayarray['vac_mode'] == 1) echo "<tr><th colspan='2'><font color='Maroon'><center><b>This player is on VACATION.</b></font></center></th></tr>"; 
+<?php
+if($displayarray['access'] == ADMIN) echo "<tr><th colspan='2'><font color='Red'><center><b>Ce joueur est Admin.</b></font></center></th></tr>";
+if($displayarray['access'] == MULTIHUNTER) echo "<tr><th colspan='2'><font color='Blue'><center><b>Ce joueur est Multihunter.</b></font></center></th></tr>";
+if($displayarray['access'] == BANNED) echo "<tr><th colspan='2'><font color='Green'><center><b>Ce joueur est BANNI.</b></font></center></th></tr>";
+if($displayarray['vac_mode'] == 1) echo "<tr><th colspan='2'><font color='Maroon'><center><b>Ce joueur est EN VACANCES.</b></font></center></th></tr>";
 ?>
     <tr>
-        <td>Details</td>
+        <td>Détails</td>
         <td>Description</td>
 
     </tr>
@@ -66,17 +66,17 @@ if($displayarray['vac_mode'] == 1) echo "<tr><th colspan='2'><font color='Maroon
     <tr>
         <td class="details">
             <table cellpadding="0" cellspacing="0">
- 
+
 <?php if($displayarray['access'] == BANNED){ echo "<tr><td colspan='2'><center><b>Banned</b></center></td></tr>"; } ?>
 
 			<tr>
 
-                <th>Rank</th>
+                <th>Rang</th>
                 <td><?php echo $ranking->getUserRank($displayarray['id']); ?></td>
             </tr>
             <tr>
-                <th>Tribe</th>
-                <td><?php 
+                <th>Tribu</th>
+                <td><?php
                 $tribeArrays = [TRIBE1, TRIBE2, TRIBE3, TRIBE4, TRIBE5];
                 echo $tribeArrays[$displayarray['tribe'] - 1];
                 ?></td>
@@ -86,7 +86,7 @@ if($displayarray['vac_mode'] == 1) echo "<tr><th colspan='2'><font color='Maroon
                 <th>Alliance</th>
                 <td><?php
                 if($displayarray['alliance'] == 0) echo "-";
-                else 
+                else
                 {
                 $displayalliance = $database->getAllianceName($displayarray['alliance']);
                 echo "<a href=\"allianz.php?aid=".$displayarray['alliance']."\">".$displayalliance."</a>";
@@ -101,7 +101,7 @@ if($displayarray['vac_mode'] == 1) echo "<tr><th colspan='2'><font color='Maroon
                 <th>Population</th>
                 <td><?php echo $totalpop; ?></td>
             </tr>
-            <?php 
+            <?php
 			//Date of Birth
             if(isset($displayarray['birthday']) && $displayarray['birthday'] != 0) {
 			    $age = date('Y') - substr($displayarray['birthday'], 0, 4);
@@ -109,16 +109,16 @@ if($displayarray['vac_mode'] == 1) echo "<tr><th colspan='2'><font color='Maroon
 				elseif ((date('m') - substr($displayarray['birthday'], 5, 2)) == 0){
 					if(date('d') < substr($displayarray['birthday'], 8, 2)) $age --;
 				}
-            echo "<tr><th>Age</th><td>$age</td></tr>";
+            echo "<tr><th>Âge</th><td>$age</td></tr>";
             }
 			//Gender
             if(isset($displayarray['gender']) && $displayarray['gender'] != 0) {
                 $gender = ($displayarray['gender']== 1)? "Male" : "Female";
-                echo "<tr><th>Gender</th><td>".$gender."</td></tr>";
+                echo "<tr><th>Genre</th><td>".$gender."</td></tr>";
             }
 			//Location
             if($displayarray['location'] != "") {
-                echo "<tr><th>Location</th><td>".$displayarray['location']."</td></tr>";
+                echo "<tr><th>Lieu de résidence</th><td>".$displayarray['location']."</td></tr>";
             }
             ?>
             <tr>
@@ -127,14 +127,14 @@ if($displayarray['vac_mode'] == 1) echo "<tr><th colspan='2'><font color='Maroon
             <tr>
 				<?php if(preg_replace("/[^0-9]/","",$_GET['uid']) == $session->uid) {
 				if($session->sit == 0){
-                echo "<td colspan=\"2\"> <a href=\"spieler.php?s=1\">&raquo; Change profile</a></td>";
+                echo "<td colspan=\"2\"> <a href=\"spieler.php?s=1\">&raquo; Modifier le profil</a></td>";
 				}else{
                 echo "<td colspan=\"2\"> <span class=none><b>&raquo; Change profile</b></span></td>";
 				}
                 } else {
-             echo "<td colspan=\"2\"> <a href=\"nachrichten.php?t=1&amp;id=".$_GET['uid']."\">&raquo; Write message</a></td>";
+             echo "<td colspan=\"2\"> <a href=\"nachrichten.php?t=1&amp;id=".$_GET['uid']."\">&raquo; Écrire un message</a></td>";
 			 }
-                ?>                
+                ?>
             </tr>
 			<!--<tr><td colspan="2"><a href="nachrichten.php?t=1&id=0"><font color="Red">&raquo; Report Player</font></a></td></tr>-->
             <tr>
@@ -147,7 +147,7 @@ if($displayarray['vac_mode'] == 1) echo "<tr><th colspan='2'><font color='Maroon
         </td>
         <td class="desc1" >
             <div class="desc1div"><?php echo nl2br($profiel[1]); ?>
-            
+
             </div>
         </td>
     </tr>
@@ -160,16 +160,16 @@ if($displayarray['vac_mode'] == 1) echo "<tr><th colspan='2'><font color='Maroon
 		<th colspan="<?php echo NEW_FUNCTIONS_OASIS ? 4 : 3; ?>">Villages</th>
      </tr>
      <tr>
-    	<td>Name</td>
-    	<?php if(NEW_FUNCTIONS_OASIS){ ?> 	
+    	<td>Nom</td>
+    	<?php if(NEW_FUNCTIONS_OASIS){ ?>
     	<td>Oasis</td>
-    	<?php } ?>	
-    	<td>Inhabitants</td>
-    	<td>Coordinates</td>	
+    	<?php } ?>
+    	<td>Population</td>
+    	<td>Coordonnées</td>
 	</tr>
 </thead>
 <tbody>
-<?php 
+<?php
         foreach($varray as $vil) {
             $hasArtifact = $database->villageHasArtefact($vil['wref']);
             $coor = $database->getCoor($vil['wref']);
@@ -181,7 +181,7 @@ if($displayarray['vac_mode'] == 1) echo "<tr><th colspan='2'><font color='Maroon
 			if(NEW_FUNCTIONS_DISPLAY_WONDER){
 				if($vil['natar'] == 1) echo "<span class=\"none3\"> (WoW)</span>";
 			}
-            
+
             if(NEW_FUNCTIONS_OASIS){
                 echo "<td class=\"hab\">";
                 $oases = $database->getOasis($vil['wref']);
@@ -218,7 +218,7 @@ if($displayarray['vac_mode'] == 1) echo "<tr><th colspan='2'><font color='Maroon
                     }
                 }
                 echo "</td>";
-            }      
+            }
             echo "<td class=\"hab\">".$vil['pop']."</td><td class=\"aligned_coords\">";
             echo "<div class=\"cox\">(".$coor['x']."</div><div class=\"pi\">|</div><div class=\"coy\">".$coor['y'].")</div></td></tr>";
         }

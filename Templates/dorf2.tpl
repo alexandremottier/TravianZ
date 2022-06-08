@@ -12,9 +12,9 @@
 <map name="map1" id="map1">
 <?php
 if($building->walling()){
-	$wtitle = Building::procResType($building->walling())." Level ".$village->resarray['f40'];
+	$wtitle = Building::procResType($building->walling())." Niveau ".$village->resarray['f40'];
 }else{
-	$wtitle = ($village->resarray['f40'] == 0) ? "Outer building site" : Building::procResType($village->resarray['f40t'], 0)." Level ".$village->resarray['f40'];
+	$wtitle = ($village->resarray['f40'] == 0) ? "Site de construction extérieur" : Building::procResType($village->resarray['f40t'], 0)." Niveau ".$village->resarray['f40'];
 }
 ?>
 	<area href="build.php?id=40" title="<?php echo $wtitle; ?>"
@@ -31,22 +31,22 @@ $coords = [19 => "53,91,91,71,127,91,91,112", "136,66,174,46,210,66,174,87", "19
 for($t = 19; $t <= 39; $t++){
 	if($village->natar == 1 && in_array($t, [25, 26, 29, 30, 33])){
 		if($t == 33){
-			if($village->resarray['f99'] > 0) $title = Building::procResType(40)." Level ".$village->resarray['f99'];	
-			else $title = Building::procResType(40);	
+			if($village->resarray['f99'] > 0) $title = Building::procResType(40)." Niveau ".$village->resarray['f99'];
+			else $title = Building::procResType(40);
 			echo "<area href=\"build.php?id=99\" title=\"$title\" coords=\"190,170,80\" shape=\"circle\"/>";
 		}
 	}else{
 		if($village->resarray['f'.$t.'t'] > 0){
-			$title = Building::procResType($village->resarray['f'.$t.'t'])." Level ".$village->resarray['f'.$t];
+			$title = Building::procResType($village->resarray['f'.$t.'t'])." Niveau ".$village->resarray['f'.$t];
 		}else{
-			$title = "Building site";
-			if(($t == 39) && ($village->resarray['f'.$t] == 0)) $title = "Rally Point building site";
+			$title = "Site de construction";
+			if(($t == 39) && ($village->resarray['f'.$t] == 0)) $title = "Site de construction d'un point de ralliement";
 		}
 		echo "<area href=\"build.php?id=$t\" title=\"$title\" coords=\"$coords[$t]\" shape=\"poly\"/>";
 	}
 }
 ?>
-	
+
     <area href="build.php?id=40" title="<?php echo $wtitle; ?>"
 		coords="312,338,347,338,377,320,406,288,421,262,421,222,396,275,360,311"
 		shape="poly" alt="" />
@@ -67,16 +67,16 @@ else $vmapc = ($village->resarray['f40'] == 0) ? "d2_0" : "d2_1".$session->tribe
 for($i = 1; $i <= 20; $i++){
 	if($village->natar == 1 and (($i + 18) == '25' || ($i + 18) == '26' || ($i + 18) == '29' || ($i + 18) == '30' || ($i + 18) == '33')){
 	}else{
-		$text = "Building site";
+		$text = "Site de construction";
 		$img = "iso";
 		if($village->resarray['f'.($i + 18).'t'] != 0){
-			$text = Building::procResType($village->resarray['f'.($i + 18).'t'])." Level ".$village->resarray['f'.($i + 18)];
+			$text = Building::procResType($village->resarray['f'.($i + 18).'t'])." Niveau ".$village->resarray['f'.($i + 18)];
 			$img = "g".$village->resarray['f'.($i + 18).'t'];
 		}
 		foreach($building->buildArray as $job){
 			if($job['field'] == ($i + 18)){
 				$img = 'g'.$job['type'].'b';
-				$text = Building::procResType($job['type'])." Level ".$village->resarray['f'.$job['field']];
+				$text = Building::procResType($job['type'])." Niveau ".$village->resarray['f'.$job['field']];
 			}
 		}
 		echo "<img src=\"img/x.gif\" class=\"building d$i $img\" alt=\"$text\" />";
@@ -95,11 +95,11 @@ if(($_SESSION['qst'] == 38 && QTYPE == 37) || ($_SESSION['qst'] == 31 && QTYPE =
 	$_SESSION['qst'] = 40;
 }
 if($village->resarray['f39'] == 0){
-	if($building->rallying()) echo "<img src=\"img/x.gif\" class=\"dx1 g16b\" alt=\"Rally Point Level ".$village->resarray['f39']."\" />";
-	else echo "<img src=\"img/x.gif\" class=\"dx1 g16e\" alt=\"Rally Point building site\" />";
+	if($building->rallying()) echo "<img src=\"img/x.gif\" class=\"dx1 g16b\" alt=\"Point de ralliement Niveau ".$village->resarray['f39']."\" />";
+	else echo "<img src=\"img/x.gif\" class=\"dx1 g16e\" alt=\"Site de construction du point de ralliement\" />";
 }
-else echo "<img src=\"img/x.gif\" class=\"dx1 g16\" alt=\"Rally Point Level ".$village->resarray['f39']."\" />";
-	
+else echo "<img src=\"img/x.gif\" class=\"dx1 g16\" alt=\"Point de ralliement Niveau ".$village->resarray['f39']."\" />";
+
 ?>
 <?php
 if($village->resarray['f99t'] == 40){

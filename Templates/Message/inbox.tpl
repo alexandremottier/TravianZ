@@ -6,9 +6,9 @@
     <form method="post" action="nachrichten.php" name="msg" ><table cellpadding="1" cellspacing="1" id="overview">
 	<thead>
 	    <tr>
-		<th colspan="2">Subject</th>
-		<th>Sender</th>
-		<th class="sent"><a href="nachrichten.php?o=1">Sent</a></th>
+		<th colspan="2">Objet</th>
+		<th>Expéditeur</th>
+		<th class="sent"><a href="nachrichten.php?o=1">Envoyé</a></th>
 	    </tr></thead><tfoot><tr><th>
 		<?php
 		$MyGold = mysqli_query($database->dblink,"SELECT plus FROM ".TB_PREFIX."users WHERE `id`='".(int) $session->uid."'") or die(mysqli_error($database->dblink));
@@ -20,8 +20,8 @@
 		<?php } ?>
 	    </th>
 	    <th colspan="2" class="buttons">
-		<button name="delmsg" value="delete" id="btn_delete" class="trav_buttons"> Delete </button>
-		<?php if($session->plus) { echo "<button name=\"archive\" value=\"Archive\" id=\"btn_archiv\" class=\"trav_buttons\" alt=\"Archive\" /> Archive </button>"; } ?>
+		<button name="delmsg" value="delete" id="btn_delete" class="trav_buttons"> Supprimer </button>
+		<?php if($session->plus) { echo "<button name=\"archive\" value=\"Archive\" id=\"btn_archiv\" class=\"trav_buttons\" alt=\"Archive\" /> Archiver </button>"; } ?>
 		<input name="ft" value="m3" type="hidden" />
 	    </th><th class="navi"><?php
 		if(!isset($_GET['s']) && count($message->inbox1) < 10) {
@@ -100,7 +100,7 @@
 		    $name++;
 		    }
 		    if(count($message->inbox1) == 0) {
-		    echo "<td colspan=\"4\" class=\"none\">There are no messages available.</td></tr>";
+		    echo "<td colspan=\"4\" class=\"none\">Il n'y a aucun message disponible.</td></tr>";
 		    }
 		    ?>
 		</tbody></table>

@@ -81,7 +81,7 @@ $to = $database->getOMInfo($units[$y]['to']);}
 				<?php
 				echo "<div class=\"in small\"><span id=timer$session->timer>".$generator->getTimeFormat($units[$y]['endtime']-time())."</span> h</div>";
 				    $datetime = $generator->procMtime($units[$y]['endtime']);
-				    echo "<div class=\"at\">";
+				    echo "<div class=\"à\">";
 				    if($datetime[0] != "today") {
 				    echo "".ON." ".$datetime[0]." ";
 				    }

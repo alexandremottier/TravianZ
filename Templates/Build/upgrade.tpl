@@ -89,7 +89,7 @@ if($session->userinfo['gold'] >= 3 && $building->getTypeLevel(17) >= 1 && $villa
     else if($bindicate == 7) {
 	if($village->allcrop - $village->pop - $technology->getUpkeep($village->unitall, 0) > 0){
     	$neededtime = $building->calculateAvaliable($id,$village->resarray['f'.$id.'t'],1+$loopsame+$doublebuild+$master);
-    	echo "<span class=\"none\">".ENOUGH_RESOURCES." ".$neededtime[0]." at  ".$neededtime[1]."</span>";
+    	echo "<span class=\"none\">".ENOUGH_RESOURCES." : ".$neededtime[0]." à  ".$neededtime[1]."</span>";
 	}else{
 		echo "<span class=\"none\">".YOUR_CROP_NEGATIVE."</span>";
 	}

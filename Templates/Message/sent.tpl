@@ -18,9 +18,9 @@
     <table cellpadding="1" cellspacing="1" id="overview">
         <thead><tr>
             <th></th>
-            <th>Subject</th>
-            <th>Recipient</th>
-            <th class="sent"><a href="nachrichten.php?t=2&s=0&amp;t=2&amp;o=1">Sent</a></th>
+            <th>Objet</th>
+            <th>Destinataire</th>
+            <th class="sent"><a href="nachrichten.php?t=2&s=0&amp;t=2&amp;o=1">Envoyé</a></th>
             </tr></thead><tfoot><tr><th><?php
 		$MyGold = mysqli_query($database->dblink,"SELECT plus FROM ".TB_PREFIX."users WHERE `id`='".(int) $session->uid."'") or die(mysqli_error($database->dblink));
 		$golds = mysqli_fetch_array($MyGold);
@@ -29,7 +29,7 @@
 		<?php } else { ?>
 		<input class="check" type="checkbox" id="s10" name="s10" onclick="Allmsg(this.form);" />
 		<?php } ?></th>
-	<th colspan="2" class="buttons"><button value="delete" name="delmsg" id="btn_delete" class="trav_buttons">Delete</button></th><th class="navi"><?php
+	<th colspan="2" class="buttons"><button value="delete" name="delmsg" id="btn_delete" class="trav_buttons">Supprimer</button></th><th class="navi"><?php
      if(!isset($_GET['s']) && count($message->sent1) < 10) {
     echo "&laquo;&raquo;";
     }
@@ -82,7 +82,7 @@
     echo "<td class=\"sel\">".$sent_as_text."</td>
 		<td class=\"top\"><a href=\"nachrichten.php?t=2a&amp;id=".$message->sent1[$i-1]['id']."\">".$message->sent1[$i-1]['topic']."</a> ";
     if($message->sent1[$i-1]['viewed'] == 0) {
-    echo "(unread)";
+    echo "(non-lu)";
     }
     $date = $generator->procMtime($message->sent1[$i-1]['time']);
     echo "</td><td class=\"send\"><a href=\"spieler.php?uid=".$message->sent1[$i-1]['target']."\">".$database->getUserField($message->sent1[$i-1]['target'],'username',0)."</a></td>

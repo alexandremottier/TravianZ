@@ -1,7 +1,7 @@
 <div id="textmenu">
-   <a href="nachrichten.php" <?php if(!isset($_GET['t'])) { echo "class=\"selected\""; } ?>>Inbox</a>
- | <a href="nachrichten.php?t=1" <?php if(isset($_GET['t']) && $_GET['t'] == 1) { echo "class=\"selected\""; } ?> >Write</a>
- | <a href="nachrichten.php?t=2" <?php if(isset($_GET['t']) && $_GET['t'] == 2) { echo "class=\"selected\""; } ?> >Sent</a>
+   <a href="nachrichten.php" <?php if(!isset($_GET['t'])) { echo "class=\"selected\""; } ?>>Boîte de réception</a>
+ | <a href="nachrichten.php?t=1" <?php if(isset($_GET['t']) && $_GET['t'] == 1) { echo "class=\"selected\""; } ?> >Écrire</a>
+ | <a href="nachrichten.php?t=2" <?php if(isset($_GET['t']) && $_GET['t'] == 2) { echo "class=\"selected\""; } ?> >Envoyés</a>
  <?php if($session->plus) {
  echo " | <a href=\"nachrichten.php?t=3\"";
  if(isset($_GET['t']) && $_GET['t'] == 3) { echo "class=\"selected\""; }

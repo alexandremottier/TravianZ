@@ -16,5 +16,5 @@
 ##                                                                             ##
 #################################################################################
 ?>
-<p class="date">[Release by: TravianZ]</p>
-<p>Thank you for using our version!</p>
+<p class="date">[Message de : Runard (Administrateur global)]</p>
+<p>Bonjour à tous,<br>nous vous informons que sur ce serveur, l'option Travian Plus a été officiellement désactivée.<br>Elle reste officieusement disponible <a href="plus.php">ici</a>. Si vous avez besoin d'or, contacter le compte Support par message.</p>

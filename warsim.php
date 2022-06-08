@@ -61,7 +61,7 @@ $battle->procSim($_POST);
 <div id="mid">
 <?php include("Templates/menu.tpl"); ?>
 <div id="content"  class="warsim">
-<h1>Combat simulator</h1>
+<h1>Simulateur de combat</h1>
 <form action="warsim.php" method="post">
 <?php
 if(isset($_POST['result'])) {
@@ -71,7 +71,7 @@ if(isset($_POST['result'])) {
     foreach($target as $tar) {
         include("Templates/Simulator/res_d".$tar.".tpl");
     }
-    echo "<p>Type of attack: <b>";
+    echo "<p>Type d'attaque : <b>";
     echo $form->getValue('ktyp') == 0 ? "Normal" : "Raid";
     echo "</b></p>";
     echo "<p>";
@@ -138,20 +138,20 @@ if(count($target) > 0) {
 ?>
 <table id="select" cellpadding="1" cellspacing="1">
 <thead><tr>
-	<td>Attacker</td>
-	<td>Defender</td>
-	<td>Type of attack</td>
+	<td>Attaquant</td>
+	<td>Défenseur</td>
+	<td>Type d'attaque</td>
 </tr></thead>
 <tbody><tr>
 	<td>
-		<label><input class="radio" type="radio" name="a1_v" value="1" <?php if($tribe == 1) { echo "checked"; } ?>/> Romans</label><br/>
+		<label><input class="radio" type="radio" name="a1_v" value="1" <?php if($tribe == 1) { echo "checked"; } ?>/> Romains</label><br/>
 		<label><input class="radio" type="radio" name="a1_v" value="2" <?php if($tribe == 2) { echo "checked"; } ?>/> Teutons</label><br/>
-		<label><input class="radio" type="radio" name="a1_v" value="3" <?php if($tribe == 3) { echo "checked"; } ?>/> Gauls</label>
+		<label><input class="radio" type="radio" name="a1_v" value="3" <?php if($tribe == 3) { echo "checked"; } ?>/> Gaulois</label>
 	</td><td>
-		<label><input class="check" type="checkbox" name="a2_v1" value="1" <?php if(in_array(1,$target)) { echo "checked"; } ?>/> Romans</label><br/>
+		<label><input class="check" type="checkbox" name="a2_v1" value="1" <?php if(in_array(1,$target)) { echo "checked"; } ?>/> Romains</label><br/>
 
 		<label><input class="check" type="checkbox" name="a2_v2" value="1" <?php if(in_array(2,$target)) { echo "checked"; } ?>/> Teutons</label><br/>
-		<label><input class="check" type="checkbox" name="a2_v3" value="1" <?php if(in_array(3,$target)) { echo "checked"; } ?>/> Gauls</label><br/>
+		<label><input class="check" type="checkbox" name="a2_v3" value="1" <?php if(in_array(3,$target)) { echo "checked"; } ?>/> Gaulois</label><br/>
 		<label><input class="check" type="checkbox" name="a2_v4" value="1" <?php if(in_array(4,$target)) { echo "checked"; } ?>/> Nature</label>
 		</td><td>
 		<label><input class="radio" type="radio" name="ktyp" value="0" <?php if($form->getValue('ktyp') == 0 || $form->getValue('ktyp') == "") { echo "checked"; } ?>/> normal</label><br/>

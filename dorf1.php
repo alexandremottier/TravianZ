@@ -23,10 +23,10 @@ if(isset($_GET['ok'])){
 
 if(isset($_GET['newdid'])) {
     $_SESSION['wid'] = $_GET['newdid'];
-    $database->query("UPDATE ".TB_PREFIX."users SET village_select=".$database->escape((int) $_GET['newdid'])." WHERE id=".$session->uid);  
+    $database->query("UPDATE ".TB_PREFIX."users SET village_select=".$database->escape((int) $_GET['newdid'])." WHERE id=".$session->uid);
 	header("Location: ".$_SERVER['PHP_SELF']);
 	exit;
-} 
+}
 else $building->procBuild($_GET);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -71,7 +71,7 @@ else $building->procBuild($_GET);
 <?php include("Templates/menu.tpl"); ?>
 <div id="content"  class="village1">
 <h1><?php echo $village->vname; if($village->loyalty!='100'){ if($village->loyalty>'33'){ $color="gr"; }else{ $color="re"; } ?><div id="loyality" class="<?php echo $color; ?>"><?php echo LOYALTY; ?> <?php echo floor($village->loyalty); ?>%</div><?php } ?></h1>
-<div id="cap" align="left"><?php if($village->capital!='0') { echo "<font color=gray>(Capital)</font>"; } ?></div>
+<div id="cap" align="left"><?php if($village->capital!='0') { echo "<font color=gray>(Capitale)</font>"; } ?></div>
 <?php include("Templates/field.tpl");
 $timer = 1;
 ?>

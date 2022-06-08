@@ -32,7 +32,7 @@ if(isset($_GET['newdid'])) {
 <html>
 <head>
 	<title><?php
-	echo SERVER_NAME . ' &raquo; &raquo; &raquo; Statistics (';
+	echo SERVER_NAME . ' &raquo; &raquo; &raquo; Statistiques (';
 
 	if (!empty($_GET['id'])) {
 	    switch ($_GET['id']) {
@@ -45,7 +45,7 @@ if(isset($_GET['newdid'])) {
 	            break;
 
 	        case '8':
-	            echo 'Heroes';
+	            echo 'Héros';
 	            break;
 
 	        case '0':
@@ -100,12 +100,12 @@ if(isset($_GET['newdid'])) {
 <div id="mid">
 <?php include("Templates/menu.tpl"); ?>
 		<div id="content"  class="statistics">
-<h1>Statistics</h1>
+<h1>Statistiques</h1>
 <div id="textmenu">
-   <a href="statistiken.php" <?php if(!isset($_GET['id']) || (isset($_GET['id']) && ($_GET['id'] == 1 || $_GET['id'] == 31 || $_GET['id'] == 32 || $_GET['id'] == 7))) { echo "class=\"selected \""; } ?>>Player</a>
+   <a href="statistiken.php" <?php if(!isset($_GET['id']) || (isset($_GET['id']) && ($_GET['id'] == 1 || $_GET['id'] == 31 || $_GET['id'] == 32 || $_GET['id'] == 7))) { echo "class=\"selected \""; } ?>>Joueur</a>
  | <a href="statistiken.php?id=4" <?php if(isset($_GET['id']) && ($_GET['id'] == 4 || $_GET['id'] == 41 || $_GET['id'] == 42 || $_GET['id'] == 43)) { echo "class=\"selected \""; } ?>>Alliances</a>
  | <a href="statistiken.php?id=2" <?php if(isset($_GET['id']) && $_GET['id'] == 2) { echo "class=\"selected \""; } ?>>Villages</a>
- | <a href="statistiken.php?id=8" <?php if(isset($_GET['id']) && $_GET['id'] == 8) { echo "class=\"selected \""; } ?>>Heroes</a>
+ | <a href="statistiken.php?id=8" <?php if(isset($_GET['id']) && $_GET['id'] == 8) { echo "class=\"selected \""; } ?>>Héros</a>
  | <a href="statistiken.php?id=0" <?php if(isset($_GET['id']) && $_GET['id'] == 0) { echo "class=\"selected \""; } ?>>General</a>
  <?php if(WW == true) { echo
  '|'; } else { echo ''; } ?> <a href="statistiken.php?id=99" <?php if(isset($_GET['id']) && $_GET['id'] == 99) { echo "class=\"selected \""; } ?>><?php if(WW == true) { echo

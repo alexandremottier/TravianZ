@@ -10,15 +10,15 @@ for($y = 0; $y < $total_for; $y++){
 	$session->timer++;
 	if($units[$y]['sort_type'] == 3){
 		if($units[$y]['attack_type'] == 2) $actionType = REINFORCEMENTFOR;
-		elseif($units[$y]['attack_type'] == 3) $actionType = ATTACK_ON;		
-		elseif($units[$y]['attack_type'] == 4) $actionType = RAID_ON;		
-	
+		elseif($units[$y]['attack_type'] == 3) $actionType = ATTACK_ON;
+		elseif($units[$y]['attack_type'] == 4) $actionType = RAID_ON;
+
 		$reinfowner = $database->getVillageField($units[$y]['from'], "owner");
 		if($units[$y]['attack_type'] != 1){
 			if($units[$y]['from'] != 0){
 				if($units[$y]['t11'] > 0 && $reinfowner == $session->uid) $colspan = 11;
 				else $colspan = 10;
-				
+
 				echo "<table class=\"troop_details\" cellpadding=\"1\" cellspacing=\"1\"><thead><tr><td class=\"role\">
                   <a href=\"karte.php?d=".$units[$y]['from']."&c=".$generator->getMapCheck($units[$y]['from'])."\">".$database->getVillageField($units[$y]['from'], "name")."</a></td>
                   <td colspan=\"$colspan\">";
@@ -38,10 +38,10 @@ for($y = 0; $y < $total_for; $y++){
 				for($i = 1; $i <= $colspan; $i++){
 					$totalunits = $units[$y]['t1'] + $units[$y]['t2'] + $units[$y]['t3'] + $units[$y]['t4'] + $units[$y]['t5'] + $units[$y]['t6'] + $units[$y]['t7'] + $units[$y]['t8'] + $units[$y]['t9'] + $units[$y]['t10'] + $units[$y]['t11'];
 					if($units[$y]['attack_type'] == 2){
-						if($reinfowner != $session->uid) echo "<td class=\"none\">?</td>";						
+						if($reinfowner != $session->uid) echo "<td class=\"none\">?</td>";
 						else
-						{					
-							if($units[$y]['t'.$i] == 0) echo "<td class=\"none\">0</td>";							
+						{
+							if($units[$y]['t'.$i] == 0) echo "<td class=\"none\">0</td>";
 							else
 							{
 								echo "<td>";
@@ -49,7 +49,7 @@ for($y = 0; $y < $total_for; $y++){
 							}
 						}
 					}else{
-						if($artifactsSum['totals'] == 0) echo "<td class=\"none\">?</td>";						
+						if($artifactsSum['totals'] == 0) echo "<td class=\"none\">?</td>";
 						else
 						{
 							if($units[$y]['t'.$i] == 0) echo "<td class=\"none\">0</td>";
@@ -65,7 +65,7 @@ for($y = 0; $y < $total_for; $y++){
 										<td colspan='.$colspan.'>
 										<div class="in small"><span id=timer'.$session->timer.'>'.$generator->getTimeFormat($units[$y]['endtime'] - time()).'</span> h</div>';
 				$datetime = $generator->procMtime($units[$y]['endtime']);
-				echo "<div class=\"at small\">";
+				echo "<div class=\"à small\">";
 				if($datetime[0] != "today") echo "".ON." ".$datetime[0]." ";
 				echo "".AT." ".$datetime[1]." ".HRS."</div>
 											</div>
@@ -110,11 +110,11 @@ for($y = 0; $y < $total_for; $y++){
 		}
 	}else if($units[$y]['sort_type'] == 4){
 		$actionType = RETURNFROM;
-		
+
 		$isoasis = $database->isVillageOases($units[$y]['from']);
-		if($isoasis == 0) $from = $database->getMInfo($units[$y]['from']);		
+		if($isoasis == 0) $from = $database->getMInfo($units[$y]['from']);
 		else $from = $database->getOMInfo($units[$y]['from']);
-		
+
 		$to = $database->getMInfo($units[$y]['vref']);
 		?>
 <table class="troop_details" cellpadding="1" cellspacing="1">
@@ -145,7 +145,7 @@ for($y = 0; $y < $total_for; $y++){
 			<th><?php echo TROOPS;?></th>
             <?php
 		for($i = 1; $i < ($units[$y]['t11'] != 0 ? 12 : 11); $i++){
-			if($units[$y]['t'.$i] == 0) echo "<td class=\"none\">0</td>";			
+			if($units[$y]['t'.$i] == 0) echo "<td class=\"none\">0</td>";
 			else
 			{
 				echo "<td>";
@@ -156,7 +156,7 @@ for($y = 0; $y < $total_for; $y++){
            </tr>
 	</tbody>
             <?php
-        $totalres = $units[$y]['wood'] + $units[$y]['clay'] + $units[$y]['iron'] + $units[$y]['crop'];		
+        $totalres = $units[$y]['wood'] + $units[$y]['clay'] + $units[$y]['iron'] + $units[$y]['crop'];
 		if($units[$y]['attack_type'] != 2 && $units[$y]['attack_type'] != 1 && $totalres > 0){
 			?>
  			<tbody class="goods">
@@ -169,11 +169,11 @@ for($y = 0; $y < $total_for; $y++){
 			for($i = 0; $i <= 9; $i++) $totalcarry += $units[$y]['t'.($i + 1)] * ${'u'.($start + $i)}['cap'];
 			echo "<div class=\"res\"><img class=\"r1\" src=\"img/x.gif\" alt=\"Lumber\" title=\"Lumber\" />".$units[$y]['wood']." | <img class=\"r2\" src=\"img/x.gif\" alt=\"Clay\" title=\"Clay\" />".$units[$y]['clay']." | <img class=\"r3\" src=\"img/x.gif\" alt=\"Iron\" title=\"Iron\" />".$units[$y]['iron']." | <img class=\"r4\" src=\"img/x.gif\" alt=\"Crop\" title=\"Crop\" />".$units[$y]['crop']."</div>";
 			echo "<div class=\"carry\"><img class=\"car\" src=\"img/x.gif\" alt=\"carry\" title=\"carry\"/>".$totalres."/".$totalcarry."</div>";
-			?>	
+			?>
 		</tr>
 	</tbody>
 		   <?php } ?>
-		   				    
+
 		<tbody class="infos">
 		<tr>
 			<th><?php echo ARRIVAL;?></th>
@@ -200,14 +200,14 @@ foreach($array as $conqured){
 	for($y = 0; $y < $total_for; $y++){
 		$session->timer++;
 		$to = $database->getOMInfo($oasis[$y]['to']);
-		if($oasis[$y]['attack_type'] == 2) $actionType = REINFORCEMENTFOR;		
-		else if($oasis[$y]['attack_type'] == 3) $actionType = ATTACK_ON;		
+		if($oasis[$y]['attack_type'] == 2) $actionType = REINFORCEMENTFOR;
+		else if($oasis[$y]['attack_type'] == 3) $actionType = ATTACK_ON;
 		else if($oasis[$y]['attack_type'] == 4) $actionType = RAID_ON;
-		
+
 		$reinfowner = $database->getVillageField($oasis[$y]['from'], "owner");
 		if($oasis[$y]['t11'] != 0 && $reinfowner == $session->uid) $colspan = 11;
 		else $colspan = 10;
-		
+
 		echo "<table class=\"troop_details\" cellpadding=\"1\" cellspacing=\"1\"><thead><tr><td class=\"role\">
                   <a href=\"karte.php?d=".$oasis[$y]['from']."&c=".$generator->getMapCheck($oasis[$y]['from'])."\">".$database->getVillageField($oasis[$y]['from'], "name")."</a></td>
                   <td colspan=\"$colspan\">";
@@ -227,10 +227,10 @@ foreach($array as $conqured){
 		for($i = 1; $i <= $colspan; $i++){
 			$totalunits = $oasis[$y]['t1'] + $oasis[$y]['t2'] + $oasis[$y]['t3'] + $oasis[$y]['t4'] + $oasis[$y]['t5'] + $oasis[$y]['t6'] + $oasis[$y]['t7'] + $oasis[$y]['t8'] + $oasis[$y]['t9'] + $oasis[$y]['t10'] + $oasis[$y]['t11'];
 			if($oasis[$y]['attack_type'] == 2){
-				if($reinfowner != $session->uid) echo "<td class=\"none\">?</td>";				
+				if($reinfowner != $session->uid) echo "<td class=\"none\">?</td>";
 				else
-				{				
-					if($oasis[$y]['t'.$i] == 0) echo "<td class=\"none\">0</td>";					
+				{
+					if($oasis[$y]['t'.$i] == 0) echo "<td class=\"none\">0</td>";
 					else
 					{
 						echo "<td>";
@@ -238,7 +238,7 @@ foreach($array as $conqured){
 					}
 				}
 			}else{
-				if($artifactsSum['totals'] == 0) echo "<td class=\"none\">?</td>";					
+				if($artifactsSum['totals'] == 0) echo "<td class=\"none\">?</td>";
 				else
 				{
 					if($oasis[$y]['t'.$i] == 0) echo "<td class=\"none\">0</td>";
@@ -294,9 +294,9 @@ for($x = 0; $x < $total_for3; $x++){
 		<tr>
 			<th><?php echo TROOPS;?></th>
             <?php
-	for($z = 1; $z <= 9; $z++) $settlers[$x]['t'.$z] = 0;	
+	for($z = 1; $z <= 9; $z++) $settlers[$x]['t'.$z] = 0;
 	$settlers[$x]['t10'] = 3;
-	
+
 	for($i = 1; $i < 11; $i++){
 		if($settlers[$x]['t'.$i] == 0) echo "<td class=\"none\">0</td>";
 		else
@@ -307,8 +307,8 @@ for($x = 0; $x < $total_for3; $x++){
 	}
 	?>
            </tr>
-	
-	
+
+
 	<tbody class="infos">
 		<tr>
 			<th><?php echo ARRIVAL;?></th>

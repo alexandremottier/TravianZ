@@ -1,4 +1,4 @@
-<?php 
+<?php
 #################################################################################
 ##              -= YOU MAY NOT REMOVE OR CHANGE THIS NOTICE =-                 ##
 ## --------------------------------------------------------------------------- ##
@@ -15,35 +15,35 @@ $building->loadBuilding();
     <thead><tr>
     <th colspan="4"><?php echo BUILDING_UPGRADING;?>
 			<?php
-            
+
             if($session->gold >= 2) {
-            ?> 
+            ?>
             	<a href="?buildingFinish=1" onclick="return confirm('<?php echo FINISH_GOLD; ?>');" title="<?php echo FINISH_GOLD; ?>"><img class="clock" alt="<?php echo FINISH_GOLD; ?>" src="img/x.gif"/></a>
-			<?php 
+			<?php
             }
             ?>
             </th>
 		</tr></thead>
 		<tbody>
-        <?php 
+        <?php
         foreach($building->buildArray as $jobs) {
 		if($jobs['master'] == 0){
         	echo "<tr><td class=\"ico\"><a href=\"?d=".$jobs['id']."&a=0&c=$session->checker\">";
             echo "<img src=\"img/x.gif\" class=\"del\" title=\"cancel\" alt=\"cancel\" /></a></td><td>";
             echo Building::procResType($jobs['type'])." (";
             echo LEVEL. " " .$jobs['level'].")";
-			
+
 
 			if($jobs['loopcon'] == 1) echo WAITING_LOOP;
 
             echo "</td><td>".P_IN. " ". "<span id=\"timer".++$session->timer."\">";
             echo $generator->getTimeFormat($jobs['timestamp']-time());
-            echo "</span> hrs.</td>";
-            echo "<td>".DONE_AT. " " .date('H:i', $jobs['timestamp'])."</td></tr>";
+            echo "</span></td>";
+            echo "<td>".DONE_AT. " " .date('H:i:s', $jobs['timestamp'])."</td></tr>";
 		}else{
         	echo "<tr><td class=\"ico\"><a href=\"?d=".$jobs['id']."&a=0&c=$session->checker\">";
             echo "<img src=\"img/x.gif\" class=\"del\" title=\"cancel\" alt=\"cancel\" /></a></td><td>";
-            echo Building::procResType($jobs['type'])."<span class=\"none\"> (Level ".$jobs['level'].")</span>";
+            echo Building::procResType($jobs['type'])."<span class=\"none\"> (Niveau ".$jobs['level'].")</span>";
 			}
       	}
         ?>

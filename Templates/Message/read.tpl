@@ -8,11 +8,11 @@ include("GameEngine/BBCode.php");
 ?>
 <div id="content"  class="messages">
 <h1>Messages</h1>
-<?php 
+<?php
 include("menu.tpl");
 ?>
 <form method="post" action="nachrichten.php">
- 
+
 <div id="read_head" class="msg_head"></div>
 <div id="read_content" class="msg_content">
 	<img src="img/x.gif" id="label" class="read" alt="" />
@@ -22,9 +22,9 @@ include("menu.tpl");
 			if ($linkSender) {
 				echo '<a href="'.rtrim(SERVER, '/')."/spieler.php?uid=".$message->reading['owner']."\">";
 			}
-			
+
 			echo $database->getUserField($message->reading['owner'],"username",0);
-			
+
 			if ($linkSender) {
 				echo '</a>';
 			}
@@ -38,16 +38,16 @@ include("menu.tpl");
 	</div>
 	<div class="clear"></div>
 	<div class="line"></div>
-	<div class="message"><?php echo stripslashes(nl2br($bbcoded)); ?></div> 
+	<div class="message"><?php echo stripslashes(nl2br($bbcoded)); ?></div>
 	<input type="hidden" name="id" value="<?php echo $message->reading['id']; ?>" />
     <input type="hidden" name="ft" value="m1" />
 	<input type="hidden" name="t" value="1" />
 	<p class="btn">
-		<button value="" name="s1" id="btn_reply" class="trav_buttons">Answer</button>
+		<button value="" name="s1" id="btn_reply" class="trav_buttons">Répondre</button>
 	</p>
 </div>
 <div id="read_foot" class="msg_foot"></div>
 </form>
- 
- 
+
+
 </div>

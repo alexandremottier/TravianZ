@@ -47,7 +47,7 @@ function chkFormular () {
     alert("Enter your username!");
     document.Formular.Username.focus();
     return false;
-  }  
+  }
   if (document.Formular.Emailadress.value == "") {
     alert("Enter an emailadress!");
     document.Formular.Emailadress.focus();
@@ -68,7 +68,7 @@ function chkFormular () {
     document.Formular.Message.focus();
     return false;
   }
- 
+
 }
 </script>
 	   </head>
@@ -83,11 +83,11 @@ function chkFormular () {
 <?php include("Templates/menu.tpl"); ?>
 <?php include("Templates/support.tpl"); ?>
 <h1>Support</h1>
-<p>You can use the following form to submit your request to the Support.<br />Please take a bit of time to answer the form questions in as much detail as possible, so that we can answer your request quickly and in length. <br />Please note that without a valid email address, your request will not get processed.
+<p>Vous pouvez utiliser le formulaire suivant pour soumettre votre demande au Support.<br />Veuillez prendre un peu de temps pour répondre aux questions du formulaire de manière aussi détaillée que possible, afin que nous puissions répondre rapidement et exhaustivement à votre demande. <br />Veuillez noter que sans une adresse électronique valide, votre demande ne sera pas traitée.
 <br><br><b>Bug reports, login errors, general questions and feedback</b></p>
 
 <form name="Formular" class=""  method="post" action="mailme.php" onsubmit="return chkFormular()">
-		
+
 		<div id="group_support_username">
         <table class="form_table form_tablel_support" width="100%">
         <tr>
@@ -107,14 +107,14 @@ function chkFormular () {
 		<div id="group_support_supportType">
 		<table class="form_table form_tablel_support" width="100%">
         <tr>
-        <td class="form_table_label form_table_label_support_supportType"><label class="form_label" for="element_7">Category </label></td>
-		<td class="form_table_element form_table_element_support_supportType"><select id="element_7" name="Subject"> 
-			<option value="please select" selected="selected">please select...</option>
-			<option value="Bugreport" >Bugreport</option>
-			<option value="General question" >General question</option>
-			<option value="I cannot login" >I cannot login</option>
-			<option value="I cannot register an account" >I cannot register an account</option>
-            <option value="Feedback" >Feedback</option>
+        <td class="form_table_label form_table_label_support_supportType"><label class="form_label" for="element_7">Catégorie </label></td>
+		<td class="form_table_element form_table_element_support_supportType"><select id="element_7" name="Subject">
+			<option value="please select" selected="selected">Sélectionnez...</option>
+			<option value="Bugreport" >Signaler un bug</option>
+			<option value="General question" >Question générale</option>
+			<option value="I cannot login" >Je ne peux pas me connecter</option>
+			<option value="I cannot register an account" >Je ne peux pas créer mon compte</option>
+            <option value="Feedback" >Retour d'expérience</option>
         </select></td>
         </tr>
         </table>
@@ -131,15 +131,15 @@ function chkFormular () {
         <div id="group_support_message">
         <table class="form_table form_tablel_support" width="100%">
         <tr>
-		<td><input type="hidden" name="" value="" /><input id="saveForm" class="button_text" type="submit" name="" value="Send form" /></td>
-        <td><input type="hidden" name="" value="" /><input id="saveForm" class="button_text" type="reset" name="" value="Clear form" /></td>
+		<td><input type="hidden" name="" value="" /><input id="saveForm" class="button_text" type="submit" name="" value="Envoyer le formulaire" /></td>
+        <td><input type="hidden" name="" value="" /><input id="saveForm" class="button_text" type="reset" name="" value="Vider le formulaire" /></td>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
         </tr>
         </table>
-        </div>		
-		</form>	
- 
+        </div>
+		</form>
+
 </div>
 <br /><br /><br /><br /><div id="side_info">
 <?php

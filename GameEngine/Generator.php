@@ -35,47 +35,47 @@ class MyGenerator {
 		global $database, $bid28, $bid14, $village;
 
 		if($vid == 0) $vid = $village->wid;
-		
+
 		$xdistance = ABS($thiscoor['x'] - $coor['x']);
 		if($xdistance > WORLD_MAX) $xdistance = (2 * WORLD_MAX + 1) - $xdistance;
-		
+
 		$ydistance = ABS($thiscoor['y'] - $coor['y']);
 		if($ydistance > WORLD_MAX) $ydistance = (2 * WORLD_MAX + 1) - $ydistance;
-		
+
 		$distance = SQRT(POW($xdistance,2) + POW($ydistance,2));
-		if(!$mode){    
-			if($ref == 1) $speed = 16;		
+		if(!$mode){
+			if($ref == 1) $speed = 16;
 			else if($ref == 2) $speed = 12;
-			else if($ref == 3) $speed = 24;			
-			else if($ref == 300) $speed = 5;			
-			else $speed = 1;		
+			else if($ref == 3) $speed = 24;
+			else if($ref == 300) $speed = 5;
+			else $speed = 1;
 		}else{
 			$speed = $ref;
 			if(($tSquareLevel = $database->getFieldLevelInVillage($vid, 14)) > 0 && $distance >= TS_THRESHOLD) {
 				$speed *= ($bid14[$tSquareLevel]['attri'] / 100) ;
 			}
 		}
-		
+
 		if($speed > 0) return round(($distance / $speed) * 3600 / INCREASE_SPEED);
 		else return round($distance * 3600 / INCREASE_SPEED);
 	}
 
 	public function getTimeFormat($time) {
 		$min = $hr = $days = 0;
-		
+
 		while($time >= 60){
 			$time -= 60;
 			$min += 1;
 		}
-		
+
 		while($min >= 60){
 			$min -= 60;
 			$hr += 1;
 		}
-		
+
 		if($min < 10) $min = "0" . $min;
 		if($time < 10) $time = "0" . $time;
-		
+
 		return $hr . ":" . $min . ":" . $time;
 	}
 
@@ -90,10 +90,10 @@ class MyGenerator {
 		 */
 		// $time += 3600*0; //Edit this yourself
 		$time += 0; // Edit this yourself
-		
+
 		$today = date('d', time()) - 1;
-		if(date('Ymd', time()) == date('Ymd', $time)) $day = "today";			
-		elseif($today == date('d', $time)) $day = "yesterday";		
+		if(date('Ymd', time()) == date('Ymd', $time)) $day = "aujourd'hui";
+		elseif($today == date('d', $time)) $day = "hier";
 		else
 		{
 			switch($pref){
@@ -104,7 +104,7 @@ class MyGenerator {
 					$day = date("j/m/y", $time);
 					break;
 				case 3 :
-					$day = date("j.m.y", $time);
+					$day = date("d/m/Y", $time);
 					break;
 				default :
 					$day = date("y/m/j", $time);

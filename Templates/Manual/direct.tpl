@@ -6,19 +6,19 @@
 				<th colspan="2">example for direct links</th>
 			</tr>
 			<tr>
-				<td>Link name</td>
-				<td>Link target</td>
+				<td>Nom du lien</td>
+				<td>Cible du lien</td>
 			</tr></thead>
 			<tbody><tr>
-				<th>Barracks</th>
+				<th>Caserne</th>
 				<td>build.php?gid=19</td>
 			</tr>
 			<tr>
-				<th>Marketplace</th>
+				<th>Place du marché</th>
 				<td>build.php?gid=17</td>
 			</tr>
 			<tr>
-				<th>Rally Point</th>
+				<th>Point de ralliement</th>
 				<td>build.php?gid=16</td>
 			</tr>
 			<tr>

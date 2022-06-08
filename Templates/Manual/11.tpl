@@ -1,4 +1,4 @@
-<h1><img class="unit u1" src="img/x.gif" alt="Legionnaire" title="Legionnaire" /> Legionnaire <span class="tribe">(Romans)</span></h1>
+<h1><img class="unit u1" src="img/x.gif" alt="Legionnaire" title="Legionnaire" /> Légionnaire <span class="tribe">(Romans)</span></h1>
 
 <table id="troop_info" cellpadding="1" cellspacing="1">
 <thead><tr>
@@ -24,25 +24,25 @@
 
 <table id="troop_details" cellpadding="1" cellspacing="1">
 <tbody><tr>
-	<th>Velocity</th>
-	<td><b>6</b> fields/hour</td>
+	<th>Vitesse</th>
+	<td><b>6</b> cases/heure</td>
 </tr>
 <tr>
-	<th>Can carry</th>
-	<td><b>50</b> resources</td>
+	<th>Peut transporter</th>
+	<td><b>50</b> ressources</td>
 </tr>
 <tr>
-	<th>Upkeep</th>
+	<th>Entretien</th>
 	<td><img class="r5" src="img/x.gif" alt="Crop consumption" title="Crop consumption" /> 1</td>
 </tr>
 <tr>
-	<th>Duration of training</th>
+	<th>Durée de la formation</th>
 	<td><img class="clock" src="img/x.gif" alt="duration" title="duration" /> 0:26:40</td>
 </tr></tbody>
 </table>
 
-<img id="big_unit" class="big_u1" src="img/x.gif" alt="Legionnaire" title="Legionnaire" /><div id="t_desc">The Legionnaire is the simple and all-purpose infantry of the Roman Empire. With his well-rounded training, he is good at both defence and attack. However, the Legionnaire will never reach the levels of the more specialized troops.</div>
-<div id="prereqs"><b>Prerequisites</b><br /><a href="manual.php?typ=4&amp;gid=19">Barracks</a> Level 1</div>
+<img id="big_unit" class="big_u1" src="img/x.gif" alt="Legionnaire" title="Legionnaire" /><div id="t_desc">Le légionnaire est l'infanterie simple et polyvalente de l'Empire romain. Grâce à son entraînement complet, il est bon aussi bien en défense qu'en attaque. Cependant, le légionnaire n'atteindra jamais le niveau des troupes plus spécialisées.</div>
+<div id="prereqs"><b>Pré-requis</b><br /><a href="manual.php?typ=4&amp;gid=19">Casernes</a> Niveau 1</div>
 <map id="nav" name="nav">
     <area href="manual.php?s=1&amp;typ=2" title="back" coords="0,0,45,18" shape="rect" alt="" />
     <area href="manual.php?s=1" title="Overview" coords="46,0,70,18" shape="rect" alt="" />

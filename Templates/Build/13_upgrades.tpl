@@ -14,7 +14,7 @@
 		for($i=($session->tribe*10-9);$i<=($session->tribe*10-2);$i++) {
 			$j = $i % 10 ;
 			if ( $technology->getTech($i) || $j == 1 ) {
-			    
+
 				echo "<tr><td class=\"desc\"><div class=\"tit\">
 <img class=\"unit u".$i."\" src=\"img/x.gif\" alt=\"".$technology->getUnitName($i)."\" title=\"".$technology->getUnitName($i)."\" />
 <a href=\"#\" onClick=\"return Popup(".$i.",1);\">".$technology->getUnitName($i)."</a> (Level ".$abdata['a'.$j];
@@ -23,14 +23,14 @@
 				    foreach($ABups as $upgrade){
 				        if(in_array(("a".$j), $upgrade)) $ups++;
 				    }
-				    if($ups > 0) echo "+".$ups;	
+				    if($ups > 0) echo "+".$ups;
 				}
 				echo ")</div>";
-				
+
 				if($abdata['a'.$j]+$ups != 20) {
 				    echo "<div class=\"details\"><img class=\"r1\" src=\"img/x.gif\" alt=\"Lumber\" title=\"Lumber\" />".${'ab'.$i}[$abdata['a'.$j]+1+$ups]['wood']."|<img class=\"r2\" src=\"img/x.gif\" alt=\"Clay\" title=\"Clay\" />".${'ab'.$i}[$abdata['a'.$j]+1+$ups]['clay']."|<img class=\"r3\" src=\"img/x.gif\" alt=\"Iron\" title=\"Iron\" />".${'ab'.$i}[$abdata['a'.$j]+1+$ups]['iron']."|<img class=\"r4\" src=\"img/x.gif\" alt=\"Crop\" title=\"Crop\" />".${'ab'.$i}[$abdata['a'.$j]+1+$ups]['crop']."|<img class=\"clock\" src=\"img/x.gif\" alt=\"duration\" title=\"duration\" />";
 				    echo $generator->getTimeFormat(round(${'ab'.$i}[$abdata['a'.$j]+1+$ups]['time']*($bid13[$building->getTypeLevel(13)]['attri'] / 100)/SPEED));
-				
+
                     //-- If available resources combined are not enough, remove NPC button
 				    $total_required = (int)(${'ab'.$i}[$abdata['a'.$j]+1+$ups]['wood'] + ${'ab'.$i}[$abdata['a'.$j]+1+$ups]['clay'] + ${'ab'.$i}[$abdata['a'.$j]+1+$ups]['iron'] + ${'ab'.$i}[$abdata['a'.$j]+1+$ups]['crop']);
                     if($session->userinfo['gold'] >= 3 && $building->getTypeLevel(17) >= 1 && $village->atotal >= $total_required) {
@@ -52,12 +52,12 @@
 				else if (${'ab'.$i}[$abdata['a'.$j]+1+$ups]['wood'] > $village->awood || ${'ab'.$i}[$abdata['a'.$j]+1+$ups]['clay'] > $village->aclay || ${'ab'.$i}[$abdata['a'.$j]+1+$ups]['iron'] > $village->airon || ${'ab'.$i}[$abdata['a'.$j]+1+$ups]['crop'] > $village->acrop) {
 				    if($village->getProd("crop")>0 || $village->acrop > ${'ab'.$i}[$abdata['a'.$j]+1+$ups]['crop']){
 					    $time = $technology->calculateAvaliable(13,${'ab'.$i}[$abdata['a'.$j]+1+$ups]);
-						echo "<br><span class=\"none\">".ENOUGH_RESOURCES." ".$time[0]." at ".$time[1]."</span></div></td>";
+						echo "<br><span class=\"none\">".ENOUGH_RESOURCES." ".$time[0]." à ".$time[1]."</span></div></td>";
 					} else {
 						echo "<br><span class=\"none\">".CROP_NEGATIVE."</span></div></td>";
 					}
 		            echo "<td class=\"act\"><div class=\"none\">".TOO_FEW_RESOURCES."</div></td></tr>";
-				}				
+				}
 				else if ($totalUps == 1 && !$session->plus || $totalUps > 1) {
 					echo "<td class=\"act\"><div class=\"none\">".UPGRADE_IN_PROGRESS."</div></td></tr>";
 				}

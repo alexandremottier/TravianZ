@@ -1,4 +1,4 @@
-<?php 
+<?php
 #################################################################################
 ##              -= YOU MAY NOT REMOVE OR CHANGE THIS NOTICE =-                 ##
 ## --------------------------------------------------------------------------- ##
@@ -40,7 +40,7 @@
 			if ($_SESSION['id_user'] != 1) {
 		?>
         <a href="plus.php" id="plus">
-        <span class="plus_text">
+            <span class="plus_text">
             <span class="plus_g">P</span>
             <span class="plus_o">l</span>
             <span class="plus_g">u</span>
@@ -85,7 +85,7 @@ height:18px;
   }
 </style>
 <?php
-$hour = date('Hi'); 
+$hour = date('Hi');
 if ($hour > 1759 or $hour < 500) {
 $day_night_img = 'night_image';
 } elseif ($hour > 1200) {

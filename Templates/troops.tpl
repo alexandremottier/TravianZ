@@ -1,4 +1,4 @@
-<?php 
+<?php
 #################################################################################
 ##              -= YOU MAY NOT REMOVE OR CHANGE THIS NOTICE =-                 ##
 ## --------------------------------------------------------------------------- ##
@@ -30,7 +30,7 @@ if($troops['hero'] > 0) {
 }
 $units = $technology->getUnitList($village->wid);
 if(!$TroopsPresent) {
-	echo "<tr><td>none</td></tr>";
+	echo "<tr><td>aucune (pour l'instant)</td></tr>";
 }
 ?>
 	</tbody></table>

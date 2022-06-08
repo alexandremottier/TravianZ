@@ -6,14 +6,14 @@ include("menu.tpl");
 <form method="post" action="nachrichten.php" name="msg" ><input type="hidden" name="ft" value="m5" /><table cellpadding="1" cellspacing="1" id="overview">
 <thead>
 <tr>
-<th colspan="2">Subject</th>
-<th>Sender</th>
-<th class="sent"><a href="nachrichten.php?s=0&amp;t=3&amp;o=1">Sent</a></th>
+<th colspan="2">Objet</th>
+<th>Expéditeur</th>
+<th class="sent"><a href="nachrichten.php?s=0&amp;t=3&amp;o=1">Envoyé</a></th>
 </tr></thead><tfoot><tr><th>
 		<input class="check" type="checkbox" id="s10" name="s10" onclick="Allmsg(this.form);" />
 	</th>
 	<th colspan="2" class="buttons">
-		<button name="delmsg" value="delete" id="btn_delete" class="trav_buttons">Delete</button> <button name="start" value="Back" id="btn_back" class="trav_buttons">Back</button></th>
+		<button name="delmsg" value="delete" id="btn_delete" class="trav_buttons">Supprimer</button> <button name="start" value="Back" id="btn_back" class="trav_buttons">Retour</button></th>
         <th class="navi"><?php
     if(!isset($_GET['s']) && count($message->archived1) < 10) {
         echo "&laquo;&raquo;";
@@ -61,7 +61,7 @@ include("menu.tpl");
         $name++;
     }
     if(count($message->archived1) == 0) {
-    echo "<td colspan=\"4\" class=\"none\">There are no messages available in the archive.</td></tr>";
+    echo "<td colspan=\"4\" class=\"none\">Il n'y a aucun message disponible dans les archives.</td></tr>";
     }
     ?>
     </tbody></table>

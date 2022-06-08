@@ -75,18 +75,18 @@ if ($session->goldclub == 1 && count($session->villages) > 1) {
             for ($i = 1; $i <= 4; $i ++) {
                 if (empty($_POST['r'.$i])) $_POST['r'.$i] = 0;
             }
-            
+
             $totalres = preg_replace("/[^0-9]/", "", $_POST['r1']) + preg_replace("/[^0-9]/", "", $_POST['r2']) + preg_replace("/[^0-9]/", "", $_POST['r3']) + preg_replace("/[^0-9]/", "", $_POST['r4']);
             $reqMerc  = ceil(($totalres - 0.1) / $market->maxcarry);
             $second   = date("s");
             $minute   = date("i");
             $hour     = date("G") - $_POST['start'];
-            
+
             if (date("G") > $_POST['start']) $day = 1;
             else $day = 0;
-            
+
             $timestamp = strtotime("-$hour hours -$second second -$minute minutes +$day day");
-            
+
             if ($totalres > 0 && $_POST['tvillage'] != $village->wid && in_array($_POST['tvillage'], $session->villages) && ($_POST['start'] >= 0 && $_POST['start'] <= 23) && ($_POST['deliveries'] >= 1 && $_POST['deliveries'] <= 3)) {
                 $database->createTradeRoute($session->uid, $_POST['tvillage'], $village->wid, $_POST['r1'], $_POST['r2'], $_POST['r3'], $_POST['r4'], $_POST['start'], $_POST['deliveries'], $reqMerc, $timestamp);
                 $route = 1;
@@ -124,7 +124,7 @@ if ($session->goldclub == 1 && count($session->villages) > 1) {
             }
             $totalres = preg_replace("/[^0-9]/", "", $_POST['r1']) + preg_replace("/[^0-9]/", "", $_POST['r2']) + preg_replace("/[^0-9]/", "", $_POST['r3']) + preg_replace("/[^0-9]/", "", $_POST['r4']);
             $reqMerc  = ceil(($totalres - 0.1) / $market->maxcarry);
-            
+
             $traderoute = $database->getTradeRouteUid($_POST['routeid']);
             if ($totalres > 0 && $traderoute == $session->uid && ($_POST['start'] >= 0 && $_POST['start'] <= 23) && ($_POST['deliveries'] >= 1 && $_POST['deliveries'] <= 3)) {
                 $database->editTradeRoute($_POST['routeid'], "wood", $_POST['r1'], 0);
@@ -142,12 +142,12 @@ if ($session->goldclub == 1 && count($session->villages) > 1) {
                 $timestamp = strtotime("-$hour hours -$second seconds -$minute minutes +$day day");
                 $database->editTradeRoute($_POST['routeid'], "timestamp", $timestamp, 0);
             }
-            
+
             $route = 1;
             unset($routeid);
             header("Location: build.php?gid=17&t=4");
             exit;
-        } 
+        }
     }
 
     if (isset($_POST['routeid']) && isset($_POST['action']) && $_POST['action'] == 'delRoute') {
@@ -167,8 +167,8 @@ if ($session->goldclub == 1) {
         if(isset($_GET['action'])){
             if($_GET['action'] == 'addList') $create = 1;
             elseif($_GET['action'] == 'addraid') $create = 2;
-            elseif($_GET['action'] == 'showSlot' && $_GET['eid']) $create = 3; 
-        }       
+            elseif($_GET['action'] == 'showSlot' && $_GET['eid']) $create = 3;
+        }
         else $create = 0;
 
         if(isset($_GET['slid']) && $_GET['slid']){
@@ -196,7 +196,7 @@ if ($session->goldclub == 1) {
         if(isset($_GET['evasion']) && is_numeric($_GET['evasion'])) {
             $evasionvillage = $database->getVillage($_GET['evasion']);
             if($evasionvillage['owner'] == $session->uid) $database->setVillageEvasion($_GET['evasion']);
-            
+
             header("Location: build.php?id=39&t=99");
             exit;
         }
@@ -277,7 +277,7 @@ if(isset($_GET['mode']) && $_GET['mode'] == 'troops' && isset($_GET['cancel']) &
 <div id="content"  class="build">
 <?php
 if(isset($_GET['id']) || isset($_GET['gid']) || $route == 1 || isset($_POST['routeid']) || isset($_GET['buildingFinish'])) {
-    
+
     if(isset($_GET['s']) && !ctype_digit($_GET['s'])) $_GET['s'] = null;
     if(isset($_GET['t']) && !ctype_digit($_GET['t'])) $_GET['t'] = null;
 	if (!ctype_digit($_GET['id'])) $_GET['id'] = 1;
@@ -296,7 +296,7 @@ if(isset($_GET['id']) || isset($_GET['gid']) || $route == 1 || isset($_POST['rou
 			include("Templates/Build/".$village->resarray['f'.$_GET['id'].'t']."_".$_GET['s'].".tpl");
 		}
 		else include("Templates/Build/".$village->resarray['f'.$_GET['id'].'t'].".tpl");
-		
+
 		if((isset($_GET['buildingFinish'])) && $_GET['buildingFinish'] == 1) {
         	if($session->gold >= 2) {
         		$building->finishAll("build.php?gid=".$_GET['id']."&ty=".$_GET['ty']);
@@ -339,7 +339,7 @@ include("Templates/res.tpl");
 echo round(($generator->pageLoadTimeEnd()-$pagestart)*1000);
 ?></b> ms
 
-<br />Server time: <span id="tp1" class="b"><?php echo date('H:i:s'); ?></span>
+<br /><?php echo SEVER_TIME;?> <span id="tp1" class="b"><?php echo date('H:i:s'); ?></span>
 </div>
 	</div>
 </div>
@@ -349,7 +349,7 @@ echo round(($generator->pageLoadTimeEnd()-$pagestart)*1000);
 	// update TITLE to include building name, as it's not very possible to do in PHP in current codebase
 	if (document.getElementsByTagName('h1').length) {
 		document.title = document.title + ' » » ' + document.getElementsByTagName('h1')[0].innerHTML.replace(/(<([^>]+)>)/ig,"");
-	} 
+	}
 	else document.title + ' » » New Building'
 </script>
 </body>

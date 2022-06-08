@@ -39,10 +39,10 @@ for($i=1;$i<=18;$i++) {
 	if($arrayVillage['f'.$i.'t'] != 0) {
 		$text = "";
 		switch($i){
-			case 1:$text = "Woodcutter Level";break;
-			case 2:$text = "Clay Pit Level";break;
-			case 3:$text = "Iron Mine Level";break;
-			case 4:$text = "Cropland Level";break;
+			case 1:$text = "Bûcheron niveau";break;
+			case 2:$text = "Puits d'argile niveau";break;
+			case 3:$text = "Mine de fer niveau";break;
+			case 4:$text = "Champs de céréales niveau";break;
 		}
 		echo "<img src=\"img/x.gif\" class=\"reslevel rf$i level".$arrayVillage['f'.$i].(isset($activeFields[$i]) ? '_active' : '')."\" alt=\"$text ".$arrayVillage['f'.$i].(isset($activeFields[$i]) ? ' (upgrade in progress)' : '')."\" />";
 	}

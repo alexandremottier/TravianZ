@@ -47,7 +47,7 @@
             echo "</td><td class=\"fin\">";
             $time = $generator->procMTime($train['timestamp']);
             if($time[0] != "today") {
-                echo "on ".$time[0]." at ";
+                echo "le ".$time[0]." à ";
             }
             echo $time[1];
         } ?>
