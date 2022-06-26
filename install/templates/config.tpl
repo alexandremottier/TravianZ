@@ -153,7 +153,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td>
                 <select name="lang">
                     <option value="fr" selected="selected">Français</option>
-                    <option value="en" selected="selected">English</option>
+                    <option value="en">English</option>
                     <option value="es">Spanish</option>
                     <option value="rs">Serbian</option>
                     <option value="ru">Rusian</option>
