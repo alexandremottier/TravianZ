@@ -759,7 +759,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
     <table>
         <tr>
             <td><span class="f9 c6">Date de début :</span></td>
-            <td width="140"><input type="text" name="start_date" id="start_date" value="<?php echo date('d.m.Y'); ?>"></td>
+            <td width="140"><input type="text" name="start_date" id="start_date" value="<?php echo date('d/m/Y'); ?>"></td>
         </tr>
         <tr>
             <td><span class="f9 c6">Heure de début :</span></td>
