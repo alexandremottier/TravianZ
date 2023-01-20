@@ -39,18 +39,18 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             </td>
             <td>
                 <select name="tzone" onChange="refresh(this.value)">
-                    <option value="1,Africa/Dakar" <?php if ($tz==1) echo "selected";?>>Afrique</option>
-                    <option value="2,America/New_York" <?php if ($tz==2) echo "selected";?>>Amérique</option>
-                    <option value="3,Antarctica/Casey" <?php if ($tz==3) echo "selected";?>>Antarctique</option>
-                    <option value="4,Arctic/Longyearbyen" <?php if ($tz==4) echo "selected";?>>Arctique</option>
-                    <option value="5,Asia/Kuala_Lumpur" <?php if ($tz==5) echo "selected";?>>Asie</option>
-                    <option value="6,Atlantic/Azores" <?php if ($tz==6) echo "selected";?>>Atlantique</option>
-                    <option value="7,Australia/Melbourne" <?php if ($tz==7) echo "selected";?>>Australie</option>
+                    <option value="1,Africa/Dakar" <?php if ($tz==1) echo "selected";?>>Europe/Madrid</option>
+                    <option value="2,America/New_York" <?php if ($tz==2) echo "selected";?>>America/New_York</option>
+                    <option value="3,Antarctica/Casey" <?php if ($tz==3) echo "selected";?>>Antarctica/Casey</option>
+                    <option value="4,Arctic/Longyearbyen" <?php if ($tz==4) echo "selected";?>>Arctic/Longyearbyen</option>
+                    <option value="5,Asia/Kuala_Lumpur" <?php if ($tz==5) echo "selected";?>>Asia/Kuala_Lumpur</option>
+                    <option value="6,Atlantic/Azores" <?php if ($tz==6) echo "selected";?>>Atlantic/Azores</option>
+                    <option value="7,Australia/Melbourne" <?php if ($tz==7) echo "selected";?>>Australia/Melbourne</option>
                     <option value="8,Europe/Bratislava" <?php if ($tz==8) echo "selected";?>>Europe (Bratislava)</option>
                     <option value="9,Europe/Bucharest" <?php if ($tz==9) echo "selected";?>>Europe (Bucharest)</option>
-                    <option value="10,Europe/London" <?php if ($tz==10) echo "selected";?>>Europe (Londres)</option>
-                    <option value="11,Indian/Maldives" <?php if ($tz==11) echo "selected";?>>Inde</option>
-                    <option value="12,Pacific/Fiji" <?php if ($tz==12) echo "selected";?>>Pacifique</option>
+                    <option value="10,Europe/London" <?php if ($tz==10) echo "selected";?>>Europe/London</option>
+                    <option value="11,Indian/Maldives" <?php if ($tz==11) echo "selected";?>>Indian/Maldives</option>
+                    <option value="12,Pacific/Fiji" <?php if ($tz==12) echo "selected";?>>Pacific/Fiji</option>
                 </select>
             </td>
         </tr>
