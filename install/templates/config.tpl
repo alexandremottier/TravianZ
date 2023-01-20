@@ -23,11 +23,11 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
 
 <form action="process.php" method="post" id="dataform">
     <p>
-        <span class="f10 c">SERVER RELATED</span>
+        <span class="f10 c">RELATIF AU SERVEUR</span>
     <table>
         <tr>
             <td>
-                <span class="f9 c6">Server name:</span>
+                <span class="f9 c6">Nom du serveur :</span>
             </td>
             <td width="140">
                 <input type="text" name="servername" id="servername" value="TravianZ">
@@ -35,28 +35,28 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
         </tr>
         <tr>
             <td>
-                <span class="f9 c6">Server Timezone:</span>
+                <span class="f9 c6">Fuseau horaire du serveur :</span>
             </td>
             <td>
                 <select name="tzone" onChange="refresh(this.value)">
-                    <option value="1,Africa/Dakar" <?php if ($tz==1) echo "selected";?>>Africa</option>
-                    <option value="2,America/New_York" <?php if ($tz==2) echo "selected";?>>America</option>
-                    <option value="3,Antarctica/Casey" <?php if ($tz==3) echo "selected";?>>Antarctica</option>
-                    <option value="4,Arctic/Longyearbyen" <?php if ($tz==4) echo "selected";?>>Arctic</option>
-                    <option value="5,Asia/Kuala_Lumpur" <?php if ($tz==5) echo "selected";?>>Asia</option>
-                    <option value="6,Atlantic/Azores" <?php if ($tz==6) echo "selected";?>>Atlantic</option>
-                    <option value="7,Australia/Melbourne" <?php if ($tz==7) echo "selected";?>>Australia</option>
+                    <option value="1,Africa/Dakar" <?php if ($tz==1) echo "selected";?>>Afrique</option>
+                    <option value="2,America/New_York" <?php if ($tz==2) echo "selected";?>>Amérique</option>
+                    <option value="3,Antarctica/Casey" <?php if ($tz==3) echo "selected";?>>Antarctique</option>
+                    <option value="4,Arctic/Longyearbyen" <?php if ($tz==4) echo "selected";?>>Arctique</option>
+                    <option value="5,Asia/Kuala_Lumpur" <?php if ($tz==5) echo "selected";?>>Asie</option>
+                    <option value="6,Atlantic/Azores" <?php if ($tz==6) echo "selected";?>>Atlantique</option>
+                    <option value="7,Australia/Melbourne" <?php if ($tz==7) echo "selected";?>>Australie</option>
                     <option value="8,Europe/Bratislava" <?php if ($tz==8) echo "selected";?>>Europe (Bratislava)</option>
                     <option value="9,Europe/Bucharest" <?php if ($tz==9) echo "selected";?>>Europe (Bucharest)</option>
-                    <option value="10,Europe/London" <?php if ($tz==10) echo "selected";?>>Europe (London)</option>
-                    <option value="11,Indian/Maldives" <?php if ($tz==11) echo "selected";?>>Indian</option>
-                    <option value="12,Pacific/Fiji" <?php if ($tz==12) echo "selected";?>>Pacific</option>
+                    <option value="10,Europe/London" <?php if ($tz==10) echo "selected";?>>Europe (Londres)</option>
+                    <option value="11,Indian/Maldives" <?php if ($tz==11) echo "selected";?>>Inde</option>
+                    <option value="12,Pacific/Fiji" <?php if ($tz==12) echo "selected";?>>Pacifique</option>
                 </select>
             </td>
         </tr>
         <tr>
             <td>
-                <span class="f9 c6">Server speed:</span>
+                <span class="f9 c6">Vitesse du serveur :</span>
             </td>
             <td>
                 <input name="speed" type="text" id="speed" value="1" size="2">
@@ -64,7 +64,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
         </tr>
         <tr>
             <td>
-                <span class="f9 c6">Troop speed:</span>
+                <span class="f9 c6">Vitesse des troupes :</span>
             </td>
             <td width="140">
                 <input type="text" name="incspeed" id="incspeed" value="1" size="2">
@@ -72,7 +72,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
         </tr>
         <tr>
             <td>
-                <span class="f9 c6">Evasion speed:</span>
+                <span class="f9 c6">Vitesse d'évasion :</span>
             </td>
             <td>
                 <input name="evasionspeed" type="text" id="evasionspeed" value="1" size="2">
@@ -80,38 +80,38 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
         </tr>
         <tr>
             <td>
-                <span class="f9 c6">Trader capacity (1 = 1x...):</span>
+                <span class="f9 c6">Capacité du négociant (1 = 1x...) :</span>
             </td>
             <td width="140">
                 <input type="text" name="tradercap" id="tradercap" value="1" size="2">
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Cranny capacity:</span></td>
+            <td><span class="f9 c6">Capacité de rétention :</span></td>
             <td width="140"><input type="text" name="crannycap" id="crannycap" value="1" size="2"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Trapper capacity:</span></td>
+            <td><span class="f9 c6">Capacité du trappeur :</span></td>
             <td width="140"><input type="text" name="trappercap" id="trappercap" value="1" size="2"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Natars Units Multiplier:</span></td>
+            <td><span class="f9 c6">Multiplicateur d'unités Natars :</span></td>
             <td width="140"><input type="text" name="natars_units" id="natars_units" value="100" size="3"></td>
         </tr>
         <tr>
-        	<td><span class="f9 c6">Natars Spawn (Days):</span></td>
+        	<td><span class="f9 c6">Fractionnement des Natars (jours) :</span></td>
             <td width="140"><input type="text" name="natars_spawn_time" id="natars_spawn_time" value="260" size="3"></td>
         </tr>
         <tr>
-        	<td><span class="f9 c6">WW spawn (Days):</span></td>
+        	<td><span class="f9 c6">Fractionnement des WW (jours) :</span></td>
             <td width="140"><input type="text" name="natars_ww_spawn_time" id="natars_ww_spawn_time" value="260" size="3"></td>
         </tr>
         <tr>
-        	<td><span class="f9 c6">WW building plan spawn (Days):</span></td>
+        	<td><span class="f9 c6">Plan de construction WW fractionné (jours) :</span></td>
             <td width="140"><input type="text" name="natars_ww_building_plan_spawn_time" id="natars_ww_building_plan_spawn_time" value="260" size="3"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">World size:</span></td>
+            <td><span class="f9 c6">Taille du monde :</span></td>
             <td>
                 <select name="wmax">
                     <option value="10">10x10</option>
@@ -128,28 +128,28 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Register Open:</span></td>
+            <td><span class="f9 c6">Inscriptions ouvertes :</span></td>
             <td>
                 <select name="reg_open">
-                    <option value="true" selected="selected">true</option>
-                    <option value="false">false</option>
+                    <option value="true" selected="selected">Oui</option>
+                    <option value="false">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Server:</span></td>
+            <td><span class="f9 c6">Serveur :</span></td>
             <td><input name="server" type="text" id="homepage" value="http://<?php echo $_SERVER['HTTP_HOST']; ?>/"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Domain:</span></td>
+            <td><span class="f9 c6">Domaine :</span></td>
             <td><input name="domain" type="text" id="homepage" value="http://<?php echo $_SERVER['HTTP_HOST']; ?>/"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Homepage:</span></td>
+            <td><span class="f9 c6">Page d'accueil :</span></td>
             <td><input name="homepage" type="text" id="homepage" value="http://<?php echo $_SERVER['HTTP_HOST']; ?>/"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Language:</span></td>
+            <td><span class="f9 c6">Langue :</span></td>
             <td>
                 <select name="lang">
                     <option value="fr" selected="selected">Français</option>
@@ -162,287 +162,287 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Beginners protection length:</span></td>
+            <td><span class="f9 c6">Durée de la protection débutants :</span></td>
             <td>
                 <select name="beginner">
-                    <option value="7200">2 hours</option>
-                    <option value="10800">3 hours</option>
-                    <option value="18000">5 hours</option>
-                    <option value="28800">8 hours</option>
-                    <option value="36000">10 hours</option>
-                    <option value="43200" selected="selected">12 hours</option>
-                    <option value="86400">24 hours (1 day)</option>
-                    <option value="172800">48 hours (2 days)</option>
-                    <option value="259200">72 hours (3 days)</option>
-                    <option value="432000">120 hours (5 days)</option>
+                    <option value="7200">2 heures</option>
+                    <option value="10800">3 heures</option>
+                    <option value="18000">5 heures</option>
+                    <option value="28800">8 heures</option>
+                    <option value="36000">10 heures</option>
+                    <option value="43200" selected="selected">12 heures</option>
+                    <option value="86400">24 heures (1 jour)</option>
+                    <option value="172800">48 heures (2 jours)</option>
+                    <option value="259200">72 heures (3 jours)</option>
+                    <option value="432000">120 heures (5 jours)</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Nature troops regeneration time:</span></td>
+            <td><span class="f9 c6">Temps de régénération des troupes naturelles :</span></td>
             <td>
                 <select name="nature_regtime">
-                    <option value="28800">8 hours</option>
-                    <option value="36000">10 hours</option>
-                    <option value="43200" selected="selected">12 hours</option>
-                    <option value="57600">16 hours</option>
-                    <option value="72000">20 hours</option>
-                    <option value="86400">24 hours</option>
+                    <option value="28800">8 heures</option>
+                    <option value="36000">10 heures</option>
+                    <option value="43200" selected="selected">12 heures</option>
+                    <option value="57600">16 heures</option>
+                    <option value="72000">20 heures</option>
+                    <option value="86400">24 heures</option>
                 </select>
             </td>
         </tr>
         <tr>
-        	<td><span class="f9 c6">Oasis wood production multiplier:</span></td>
+        	<td><span class="f9 c6">Multiplicateur de la production de bois d'oasis :</span></td>
             <td width="140"><input type="text" name="oasis_wood_multiplier" id="oasis_wood_multiplier" value="40"></td>
         </tr>
         <tr>
-        	<td><span class="f9 c6">Oasis clay production multiplier:</span></td>
+        	<td><span class="f9 c6">Multiplicateur de la production d'argile de l'oasis :</span></td>
             <td width="140"><input type="text" name="oasis_clay_multiplier" id="oasis_clay_multiplier" value="40"></td>
         </tr>
         <tr>
-        	<td><span class="f9 c6">Oasis iron production multiplier:</span></td>
+        	<td><span class="f9 c6">Multiplicateur de la production de fer dans les oasis :</span></td>
             <td width="140"><input type="text" name="oasis_iron_multiplier" id="oasis_iron_multiplier" value="40"></td>
         </tr>
         <tr>
-        	<td><span class="f9 c6">Oasis crop production multiplier:</span></td>
+        	<td><span class="f9 c6">Multiplicateur de la production de céréales des oasis :</span></td>
             <td width="140"><input type="text" name="oasis_crop_multiplier" id="oasis_crop_multiplier" value="40"></td>
         </tr>
         <tr>
         <tr class="hover">
-            <td><span class="f9 c6">Medal Interval:</span></td>
+            <td><span class="f9 c6">Intervalle entre les médailles :</span></td>
             <td>
                 <select name="medalinterval">
-                    <option value="0">none</option>
-                    <option value="(3600*24)">1 day</option>
-                    <option value="(3600*24*2)">2 days</option>
-                    <option value="(3600*24*3)">3 days</option>
-                    <option value="(3600*24*4)">4 days</option>
-                    <option value="(3600*24*5)">5 days</option>
-                    <option value="(3600*24*6)">6 days</option>
-                    <option value="(3600*24*7)" selected="selected">7 days</option>
+                    <option value="0">Aucun</option>
+                    <option value="(3600*24)">1 jour</option>
+                    <option value="(3600*24*2)">2 jours</option>
+                    <option value="(3600*24*3)">3 jours</option>
+                    <option value="(3600*24*4)">4 jours</option>
+                    <option value="(3600*24*5)">5 jours</option>
+                    <option value="(3600*24*6)">6 jours</option>
+                    <option value="(3600*24*7)" selected="selected">7 jours</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Storage Multipler:</span></td>
+            <td><span class="f9 c6">Multiplicateur de stockage :</span></td>
             <td width="140"><input type="text" name="storage_multiplier" id="storage_multiplier" value="1"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Tourn Threshold:</span></td>
+            <td><span class="f9 c6">Seuil du tournoi :</span></td>
             <td width="140"><input type="text" name="ts_threshold" id="ts_threshold" value="20"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Great Workshop:</span></td>
+            <td><span class="f9 c6">Grand atelier :</span></td>
             <td>
                 <select name="great_wks">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">ww:</span></td>
+            <td><span class="f9 c6">WW:</span></td>
             <td>
                 <select name="ww">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Show Natars in Statistics:</span></td>
+            <td><span class="f9 c6">Afficher les Natars dans les statistiques :</span></td>
             <td>
                 <select name="show_natars">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Peace system:</span></td>
+            <td><span class="f9 c6">Système de paix :</span></td>
             <td>
                 <select name="peace">
-                    <option value="0" selected="selected">None</option>
+                    <option value="0" selected="selected">Aucun</option>
                     <option value="1">Normal</option>
-                    <option value="2">Christmas</option>
-                    <option value="3">New Year</option>
-                    <option value="4">Easter</option>
+                    <option value="2">Noël</option>
+                    <option value="3">Jour de l'An</option>
+                    <option value="4">Pâques</option>
                 </select>
             </td>
         </tr>
     </table>
     </p>
     <p>
-        <span class="f10 c">NEW MECHANICS AND FUNCTIONS RELATED</span>
+        <span class="f10 c">NOUVEAUX MÉCANISMES ET FONCTIONS LIÉS</span>
     <table>
         <tr>
-            <td><span class="f9 c6">Display oasis in profile:</span></td>
+            <td><span class="f9 c6">Afficher oasis sur le profil :</span></td>
             <td>
                 <select name="new_functions_oasis">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Alliance invitation message:</span></td>
+            <td><span class="f9 c6">Message d'invitation de l'Alliance :</span></td>
             <td>
                 <select name="new_functions_alliance_invitation">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">New Alliance & Embassy Mechanics:</span></td>
+            <td><span class="f9 c6">Mécanismes de la nouvelle alliance et de l'ambassade :</span></td>
             <td>
                 <select name="new_functions_embassy_mechanics">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">New forum post message:</span></td>
+            <td><span class="f9 c6">Nouveau message du forum :</span></td>
             <td>
                 <select name="new_functions_forum_post_message">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Tribes images in profile:</span></td>
+            <td><span class="f9 c6">Images des tribus sur le profil :</span></td>
             <td>
                 <select name="new_functions_tribe_images">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">MHs images in profile:</span></td>
+            <td><span class="f9 c6">Images de Multi-Hunter sur le profil :</span></td>
             <td>
                 <select name="new_functions_mhs_images">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Display artifact in profile:</span></td>
+            <td><span class="f9 c6">Afficher les artéfacts sur le profil :</span></td>
             <td>
                 <select name="new_functions_display_artifact">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
 		<tr>
-            <td><span class="f9 c6">Display wonder in profile:</span></td>
+            <td><span class="f9 c6">Afficher la merveille sur le profil :</span></td>
             <td>
                 <select name="new_functions_display_wonder">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
 		<tr>
-            <td><span class="f9 c6">Vacation Mode:</span></td>
+            <td><span class="f9 c6">Mode vacances :</span></td>
             <td>
                 <select name="new_functions_vacation">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
 		<tr>
-            <td><span class="f9 c6">Catapult targets:</span></td>
+            <td><span class="f9 c6">Cibles de catapulte :</span></td>
             <td>
                 <select name="new_functions_display_catapult_target">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
 		<tr>
-            <td><span class="f9 c6">Manual on Nature and Natars:</span></td>
+            <td><span class="f9 c6">Manuel sur la nature et les natars :</span></td>
             <td>
                 <select name="new_functions_manual_naturenatars">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
 		<tr>
-            <td><span class="f9 c6">Direct links placement:</span></td>
+            <td><span class="f9 c6">Placement de liens directs :</span></td>
             <td>
                 <select name="new_functions_display_links">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
 		<tr>
-            <td><span class="f9 c6">Medal Veteran Player:</span></td>
+            <td><span class="f9 c6">Médaille Joueur Vétéran (3 ans) :</span></td>
             <td>
                 <select name="new_functions_medal_3year">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
 		<tr>
-            <td><span class="f9 c6">Medal Veteran Player 5a:</span></td>
+            <td><span class="f9 c6">Médaille Joueur Vétéran (5 ans) :</span></td>
             <td>
                 <select name="new_functions_medal_5year">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
 		<tr>
-            <td><span class="f9 c6">Medal Veteran Player 10a:</span></td>
+            <td><span class="f9 c6">Médaille Joueur Vétéran (10 ans) :</span></td>
             <td>
                 <select name="new_functions_medal_10year">
-                    <option value="true">true</option>
-                    <option value="false" selected="selected">false</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
     </table>
     </p>
     <p>
-        <span class="f10 c">SQL RELATED</span>
+        <span class="f10 c">RELATIF AU SERVEUR SQL</span>
     <table>
         <tr>
-            <td><span class="f9 c6">Hostname:</span></td>
+            <td><span class="f9 c6">Nom d'hôte :</span></td>
             <td><input name="sserver" type="text" id="sserver" value="localhost"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Port:</span></td>
+            <td><span class="f9 c6">Port :</span></td>
             <td><input name="sport" type="text" id="sport" value="3306"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Username:</span></td>
+            <td><span class="f9 c6">Nom d'utilisateur SQL :</span></td>
             <td><input name="suser" type="text" id="suser" value=""></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Password:</span></td>
+            <td><span class="f9 c6">Mot de passe SQL :</span></td>
             <td><input type="password" name="spass" id="spass"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">DB name:</span></td>
+            <td><span class="f9 c6">Nom de la base de données :</span></td>
             <td><input type="text" name="sdb" id="sdb"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Prefix:</span></td>
+            <td><span class="f9 c6">Préfixe base SQL :</span></td>
             <td><input type="text" name="prefix" id="prefix" value="s1_" size="5"></td>
         </tr>
-        <td><span class="f9 c6">Type:</span></td>
+        <td><span class="f9 c6">Type de base SQL :</span></td>
         <td>
             <select name="connectt">
-                <option value="0" disabled="disabled">MYSQL (deprecated, removed in PHP 7)</option>
+                <option value="0" disabled="disabled">MYSQL (obsolète, supprimé dans PHP 7)</option>
                 <option value="1" selected="selected">MYSQLi</option>
             </select>
         </td>
@@ -466,196 +466,196 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
         <span class="f10 c">PLUS GOLD PACKAGES</span>
     <table>
         <tr>
-            <td><span class="f9 c6">Your PayPal E-Mail Address:</span>
-            <br />(must be either <b>Business</b> or <b>Premier</b> account)</td>
+            <td><span class="f9 c6">Votre adresse électronique PayPal :</span>
+            <br />(Doit soit un compte soit <b>Business</b> soit <b>Premier</b>)</td>
             <td><input type="text" name="paypal-email" id="paypal-email" value="@"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
-            <td><span class="f9 c6">Payment Currency:</span>
-            <br />(your PayPal account must be able to receive this currency)</td>
+            <td><span class="f9 c6">Devise de paiement :</span>
+            <br />(votre compte PayPal doit être en mesure de recevoir cette devise)</td>
             <td><input type="text" name="paypal-currency" id="paypal-currency" value="EUR"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
-            <td><span class="f9 c6">Package "A" Amount of Gold:</span></td>
+            <td><span class="f9 c6">Package "A" Quantité d'Or :</span></td>
             <td><input type="text" name="plus-a-gold" id="plus-a-gold" value="60"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Package "A" Price:</span></td>
+            <td><span class="f9 c6">Package "A" Prix :</span></td>
             <td><input type="text" name="plus-a-price" id="plus-a-price" value="1,99"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
-            <td><span class="f9 c6">Package "B" Amount of Gold:</span></td>
+            <td><span class="f9 c6">Package "B" Quantité d'Or :</span></td>
             <td><input type="text" name="plus-b-gold" id="plus-b-gold" value="120"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Package "B" Price:</span></td>
+            <td><span class="f9 c6">Package "B" Prix :</span></td>
             <td><input type="text" name="plus-b-price" id="plus-b-price" value="4,99"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
-            <td><span class="f9 c6">Package "C" Amount of Gold:</span></td>
+            <td><span class="f9 c6">Package "C" Quantité d'Or :</span></td>
             <td><input type="text" name="plus-c-gold" id="plus-c-gold" value="360"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Package "C" Price:</span></td>
+            <td><span class="f9 c6">Package "C" Prix :</span></td>
             <td><input type="text" name="plus-c-price" id="plus-c-price" value="9,99"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
-            <td><span class="f9 c6">Package "D" Amount of Gold:</span></td>
+            <td><span class="f9 c6">Package "D" Quantité d'Or :</span></td>
             <td><input type="text" name="plus-d-gold" id="plus-d-gold" value="1000"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Package "D" Price:</span></td>
+            <td><span class="f9 c6">Package "D" Prix :</span></td>
             <td><input type="text" name="plus-d-price" id="plus-d-price" value="19,99"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
-            <td><span class="f9 c6">Package "E" Amount of Gold:</span></td>
+            <td><span class="f9 c6">Package "E" Quantité d'Or :</span></td>
             <td><input type="text" name="plus-e-gold" id="plus-e-gold" value="2000"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Package "E" Price:</span></td>
+            <td><span class="f9 c6">Package "E" Prix :</span></td>
             <td><input type="text" name="plus-e-price" id="plus-e-price" value="49,99"></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
-            <td><span class="f9 c6">Plus account length:</span></td>
+            <td><span class="f9 c6">Durée du compte Plus :</span></td>
             <td>
                 <select name="plus_time">
-                    <option value="(3600*12)">12 hours</option>
-                    <option value="(3600*24)">1 day</option>
-                    <option value="(3600*24*2)">2 days</option>
-                    <option value="(3600*24*3)">3 days</option>
-                    <option value="(3600*24*4)">4 days</option>
-                    <option value="(3600*24*5)">5 days</option>
-                    <option value="(3600*24*6)">6 days</option>
-                    <option value="(3600*24*7)" selected="selected">7 days</option>
+                    <option value="(3600*12)">12 heures</option>
+                    <option value="(3600*24)">1 jour</option>
+                    <option value="(3600*24*2)">2 jours</option>
+                    <option value="(3600*24*3)">3 jours</option>
+                    <option value="(3600*24*4)">4 jours</option>
+                    <option value="(3600*24*5)">5 jours</option>
+                    <option value="(3600*24*6)">6 jours</option>
+                    <option value="(3600*24*7)" selected="selected">7 jours</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">+25% production length:</span></td>
+            <td><span class="f9 c6">Durée de la production +25% :</span></td>
             <td>
                 <select name="plus_production">
-                    <option value="(3600*12)">12 hours</option>
-                    <option value="(3600*24)">1 day</option>
-                    <option value="(3600*24*2)">2 days</option>
-                    <option value="(3600*24*3)">3 days</option>
-                    <option value="(3600*24*4)">4 days</option>
-                    <option value="(3600*24*5)">5 days</option>
-                    <option value="(3600*24*6)">6 days</option>
-                    <option value="(3600*24*7)" selected="selected">7 days</option>
+                    <option value="(3600*12)">12 heures</option>
+                    <option value="(3600*24)">1 jour</option>
+                    <option value="(3600*24*2)">2 jours</option>
+                    <option value="(3600*24*3)">3 jours</option>
+                    <option value="(3600*24*4)">4 jours</option>
+                    <option value="(3600*24*5)">5 jours</option>
+                    <option value="(3600*24*6)">6 jours</option>
+                    <option value="(3600*24*7)" selected="selected">7 jours</option>
                 </select>
             </td>
         </tr>
     </table>
     </p>
     <p>
-        <span class="f10 c">NEWSBOX OPTIONS</span>
+        <span class="f10 c">OPTIONS DE LA BOÎTE À LETTRES</span>
     <table>
         <tr>
-            <td><span class="f9 c6">Newsbox 1:</span></td>
+            <td><span class="f9 c6">BàL 1:</span></td>
             <td>
                 <select name="box1">
-                    <option value="true">Enabled</option>
-                    <option value="false" selected="selected">Disabled</option>
+                    <option value="true">Activé</option>
+                    <option value="false" selected="selected">Désactivé</option>
                 </select>
             </td>
         </tr>
-        <td><span class="f9 c6">Newsbox 2:</span></td>
+        <td><span class="f9 c6">BàL 2:</span></td>
         <td>
             <select name="box2">
-                <option value="true">Enabled</option>
-                <option value="false" selected="selected">Disabled</option>
+              <option value="true">Activé</option>
+              <option value="false" selected="selected">Désactivé</option>
             </select>
         </td>
         </tr>
-        <td><span class="f9 c6">Newsbox 3:</span></td>
+        <td><span class="f9 c6">BàL 3:</span></td>
         <td>
             <select name="box3">
-                <option value="true">Enabled</option>
-                <option value="false" selected="selected">Disabled</option>
+              <option value="true">Activé</option>
+              <option value="false" selected="selected">Désactivé</option>
             </select>
         </td>
         </tr>
     </table>
     </p>
     <p>
-        <span class="f10 c">LOG RELATED (You should disable them)</span>
+        <span class="f10 c">RELATIF AUX JOURNAUX (Vous devriez les désactiver)</span>
     <table>
         <tr>
-            <td><span class="f9 c6">Log Building:</span></td>
+            <td><span class="f9 c6">Log de construction :</span></td>
             <td>
                 <select name="log_build">
-                    <option value="true">Yes</option>
-                    <option value="false" selected="selected">No</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Log Tech:</span></td>
+            <td><span class="f9 c6">Log Technique :</span></td>
             <td>
                 <select name="log_tech">
-                    <option value="true">Yes</option>
-                    <option value="false" selected="selected">No</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Log Login:</span></td>
+            <td><span class="f9 c6">Log de connexion :</span></td>
             <td>
                 <select name="log_login">
-                    <option value="true">Yes</option>
-                    <option value="false" selected="selected">No</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Log Gold:</span></td>
+            <td><span class="f9 c6">Log Gold :</span></td>
             <td>
                 <select name="log_gold_fin">
-                    <option value="true">Yes</option>
-                    <option value="false" selected="selected">No</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Log Admin:</span></td>
+            <td><span class="f9 c6">Log Admin :</span></td>
             <td>
                 <select name="log_admin">
-                    <option value="true">Yes</option>
-                    <option value="false" selected="selected">No</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Log War:</span></td>
+            <td><span class="f9 c6">Log Guerre :</span></td>
             <td>
                 <select name="log_war">
-                    <option value="true">Yes</option>
-                    <option value="false" selected="selected">No</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Log Market:</span></td>
+            <td><span class="f9 c6">Log marché :</span></td>
             <td>
                 <select name="log_market">
-                    <option value="true">Yes</option>
-                    <option value="false" selected="selected">No</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Log Illegal:</span></td>
+            <td><span class="f9 c6">Log illégal :</span></td>
             <td>
                 <select name="log_illegal">
-                    <option value="true">Yes</option>
-                    <option value="false" selected="selected">No</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
@@ -663,111 +663,111 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
             <td><span class="f9 c6">Log :</span></td>
             <td>
                 <select name="">
-                    <option value="true">Yes</option>
-                    <option value="false" selected="selected">No</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
     </table>
     </p>
     <p>
-        <span class="f10 c">EXTRA OPTIONS</span>
+        <span class="f10 c">OPTIONS ADDITIONNELLES</span>
     <table>
         <tr>
-            <td><span class="f9 c6">Quest:</span></td>
+            <td><span class="f9 c6">Quêtes :</span></td>
             <td>
                 <select name="quest">
-                    <option value="true" selected="selected">Yes</option>
-                    <option value="false">No</option>
+                    <option value="true" selected="selected">Oui</option>
+                    <option value="false">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Quest Type:</span></td>
+            <td><span class="f9 c6">Type de quêtes :</span></td>
             <td>
                 <select name="qtype">
-                    <option value="25" selected="selected">Official Travian</option>
+                    <option value="25" selected="selected">Travian officiel</option>
                     <option value="37">TravianZ Extended</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Activate:</span></td>
+            <td><span class="f9 c6">Activer :</span></td>
             <td>
                 <select name="activate">
-                    <option value="true">Yes</option>
-                    <option value="false" selected="selected">No</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Limit Mailbox:</span></td>
+            <td><span class="f9 c6">Limiter la boîte aux lettres:</span></td>
             <td>
                 <select name="limit_mailbox">
-                    <option value="true">Yes</option>
-                    <option value="false" selected="selected">No</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
-                (NOT DONE)
+                (INACHEVÉ)
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Max mails:</span></td>
-            <td><input type="text" name="max_mails" id="max_mails" value="30" size="4"> (NOT DONE)</td>
+            <td><span class="f9 c6">Maximum de messages :</span></td>
+            <td><input type="text" name="max_mails" id="max_mails" value="30" size="4"> (INACHEVÉ)</td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Demolish - lvl required:</span></td>
+            <td><span class="f9 c6">Niveau requis pour démolir :</span></td>
             <td>
                 <select name="demolish">
                     <option value="5">5</option>
-                    <option value="10" selected="selected">10 - Default</option>
+                    <option value="10" selected="selected">10 - Par défaut</option>
                     <option value="15">15</option>
                     <option value="20">20</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Village Expand:</span></td>
+            <td><span class="f9 c6">Expansion du village :</span></td>
             <td>
                 <select name="village_expand">
-                    <option value="1" selected="selected">Slow</option>
-                    <option value="0">Fast</option>
+                    <option value="1" selected="selected">Lente</option>
+                    <option value="0">Rapide</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Error Reporting:</span></td>
+            <td><span class="f9 c6">Rapport d'erreur :</span></td>
             <td>
                 <select name="error">
-                    <option value="error_reporting (E_ALL ^ E_NOTICE ^ E_DEPRECATED);" selected="selected">Yes</option>
-                    <option value="error_reporting (0);">No</option>
+                    <option value="error_reporting (E_ALL ^ E_NOTICE ^ E_DEPRECATED);" selected="selected">Oui</option>
+                    <option value="error_reporting (0);">Non</option>
                 </select>
             </td>
         </tr>
         <tr>
-            <td><span class="f9 c6">T4 is Coming screen:</span></td>
+            <td><span class="f9 c6">Ecran "T4 is coming" :</span></td>
             <td>
                 <select name="t4_coming">
-                    <option value="true">Yes</option>
-                    <option value="false" selected="selected">No</option>
+                    <option value="true">Oui</option>
+                    <option value="false" selected="selected">Non</option>
                 </select>
             </td>
         </tr>
     </table>
     </p>
     <br />
-    <span class="f10 c">Server Start Settings</span>
+    <span class="f10 c">Paramètres de démarrage du serveur</span>
     <table>
         <tr>
-            <td><span class="f9 c6">Start Date:</span></td>
+            <td><span class="f9 c6">Date de début :</span></td>
             <td width="140"><input type="text" name="start_date" id="start_date" value="<?php echo date('d.m.Y'); ?>"></td>
         </tr>
         <tr>
-            <td><span class="f9 c6">Start Time:</span></td>
+            <td><span class="f9 c6">Heure de début :</span></td>
             <td width="140"><input type="text" name="start_time" id="start_time" value="<?php echo date('H:i'); ?>"></td>
         </tr>
     </table>
     <center>
-        <input type="submit" name="Submit" id="Submit" value="Submit">
+        <input type="submit" name="Submit" id="Submit" value="Valider">
         <input type="hidden" name="subconst" value="1">
     </center>
 </form>
